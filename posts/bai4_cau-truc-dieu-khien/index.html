@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>CẤU TRÚC ĐIỀU KHIỂN | Blog Java &amp; JavaScript</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="Hướng dẫn sử dụng if-else, switch-case, vòng lặp for, while và do-while.">
+    <meta name="generator" content="Hugo 0.150.0">
+    
+    
+    
+      <meta name="robots" content="index, follow">
+    
+    <meta name="author" content="Hồ Nguyễn Tấn Đạt">
+    
+
+    
+<link rel="stylesheet" href="/HNTDat0805/MyBlog/ananke/css/main.min.2438bcafd7af9675c426d1a4afcd16cfff18e4e10f401071e45b5ccd3be40a0d.css" >
+
+
+
+  
+    <link rel="stylesheet" href="/HNTDat0805/MyBlog/css/custom.css">
+  
+
+
+    
+
+
+    
+      
+
+    
+
+    
+
+    
+      <link rel="canonical" href="https://github.com/HNTDat0805/MyBlog/posts/bai4_cau-truc-dieu-khien/">
+    
+
+    <meta property="og:url" content="https://github.com/HNTDat0805/MyBlog/posts/bai4_cau-truc-dieu-khien/">
+  <meta property="og:site_name" content="Blog Java & JavaScript">
+  <meta property="og:title" content="CẤU TRÚC ĐIỀU KHIỂN">
+  <meta property="og:description" content="Hướng dẫn sử dụng if-else, switch-case, vòng lặp for, while và do-while.">
+  <meta property="og:locale" content="vi">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2025-10-23T00:00:00+00:00">
+    <meta property="article:modified_time" content="2025-10-23T00:00:00+00:00">
+    <meta property="article:tag" content="Java">
+    <meta property="article:tag" content="Điều Khiển">
+    <meta property="article:tag" content="If">
+    <meta property="article:tag" content="Switch">
+    <meta property="article:tag" content="Loop">
+    <meta property="article:tag" content="Vòng Lặp">
+
+  <meta itemprop="name" content="CẤU TRÚC ĐIỀU KHIỂN">
+  <meta itemprop="description" content="Hướng dẫn sử dụng if-else, switch-case, vòng lặp for, while và do-while.">
+  <meta itemprop="datePublished" content="2025-10-23T00:00:00+00:00">
+  <meta itemprop="dateModified" content="2025-10-23T00:00:00+00:00">
+  <meta itemprop="wordCount" content="473">
+  <meta itemprop="keywords" content="Java,Điều Khiển,If,Switch,Loop,Vòng Lặp">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="CẤU TRÚC ĐIỀU KHIỂN">
+  <meta name="twitter:description" content="Hướng dẫn sử dụng if-else, switch-case, vòng lặp for, while và do-while.">
+
+      
+    
+	
+  </head><body class="ma0 avenir bg-near-white production">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l center items-center justify-between">
+    <a href="/HNTDat0805/MyBlog/" class="f3 fw2 hover-white white-90 dib no-underline">
+      
+        Blog Java &amp; JavaScript
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+        <ul class="pl0 mr3">
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white white-90 no-underline" href="/HNTDat0805/MyBlog/" title="🏠 Trang chủ page">
+              🏠 Trang chủ
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white white-90 no-underline" href="/HNTDat0805/MyBlog/about/" title="👨‍💻 Giới thiệu page">
+              👨‍💻 Giới thiệu
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white white-90 no-underline" href="/HNTDat0805/MyBlog/posts/" title="📰 Blog page">
+              📰 Blog
+            </a>
+          </li>
+          
+        </ul>
+      
+      <div class="ananke-socials"></div>
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  
+  <article class="flex-l mw8 center ph3 flex-wrap justify-between">
+    <header class="mt4 w-100">
+      <aside class="instapaper_ignoref b helvetica tracked ttu">
+          
+        Posts
+      </aside><div id="sharing" class="mt3 ananke-socials"></div>
+<h1 class="f1 athelas mt3 mb1">CẤU TRÚC ĐIỀU KHIỂN</h1>
+      
+      <p class="tracked"><strong>Hồ Nguyễn Tấn Đạt</strong>
+      </p>
+      
+      
+      
+      <time class="f6 mv4 dib tracked" datetime="2025-10-23T00:00:00Z">23-10-2025</time>
+      
+
+      
+      
+        
+        
+        <span class="f6 mv4 dib tracked"> - 3 minutes read </span>
+        <span class="f6 mv4 dib tracked"> - 473 words </span>
+      
+    </header>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><h3 id="i-mở-đầu-đưa-ra-quyết-định">I. Mở Đầu: Đưa Ra Quyết Định</h3>
+<p><strong>Cấu trúc Điều khiển</strong> giúp kiểm soát luồng thực thi của chương trình, cho phép ra quyết định (chọn nhánh thực thi) và lặp lại (thực hiện một khối lệnh nhiều lần) tùy theo điều kiện cụ thể.</p>
+<h3 id="ii-câu-lệnh-điều-kiện-conditional-statements">II. Câu Lệnh Điều Kiện (Conditional Statements)</h3>
+<h4 id="1-if-else-if-và-else">1. <code>if</code>, <code>else if</code>, và <code>else</code></h4>
+<p>Dùng để thực thi một khối code nếu một điều kiện cụ thể là <code>true</code>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">int</span> diemSo <span style="color:#f92672">=</span> 75;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> (diemSo <span style="color:#f92672">&gt;=</span> 90) {
+</span></span><span style="display:flex;"><span>    System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;Hạng A&#34;</span>);
+</span></span><span style="display:flex;"><span>} <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> (diemSo <span style="color:#f92672">&gt;=</span> 70) {
+</span></span><span style="display:flex;"><span>    System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;Hạng B&#34;</span>);
+</span></span><span style="display:flex;"><span>} <span style="color:#66d9ef">else</span> {
+</span></span><span style="display:flex;"><span>    System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;Hạng C&#34;</span>);
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h4 id="2-switch">2. switch</h4>
+<p>Dùng khi bạn có nhiều trường hợp (case) so sánh với cùng một biến. Lệnh break là bắt buộc để thoát khỏi khối switch sau khi thực thi xong một case.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">int</span> ngay <span style="color:#f92672">=</span> 3;
+</span></span><span style="display:flex;"><span>String tenNgay;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">switch</span> (ngay) {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">case</span> 1:
+</span></span><span style="display:flex;"><span>        tenNgay <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Chủ Nhật&#34;</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">break</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">case</span> 3:
+</span></span><span style="display:flex;"><span>        tenNgay <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Thứ Ba&#34;</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">break</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">default</span>:
+</span></span><span style="display:flex;"><span>        tenNgay <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Ngày Không Hợp Lệ&#34;</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;Hôm nay là: &#34;</span> <span style="color:#f92672">+</span> tenNgay);
+</span></span></code></pre></div><h3 id="iii-vòng-lặp-loops---lặp-lại-hành-động">III. Vòng Lặp (Loops) - Lặp Lại Hành Động</h3>
+<h4 id="1-vòng-lặp-for">1. Vòng Lặp for</h4>
+<p>Thích hợp khi bạn biết chính xác số lần lặp.</p>
+<p>Cấu trúc gồm 3 phần: Khởi tạo; Điều kiện lặp; Bước tăng/giảm.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#75715e">// Lặp 5 lần, từ i=0 đến i=4</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> 0; i <span style="color:#f92672">&lt;</span> 5; i<span style="color:#f92672">++</span>) {
+</span></span><span style="display:flex;"><span>    System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;Lặp lần thứ: &#34;</span> <span style="color:#f92672">+</span> i);
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h4 id="2-vòng-lặp-while">2. Vòng Lặp while</h4>
+<p>Lặp liên tục miễn là điều kiện còn đúng (true). Rất quan trọng là phải có một bước thoát bên trong khối lệnh.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">int</span> dem <span style="color:#f92672">=</span> 0;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">while</span> (dem <span style="color:#f92672">&lt;</span> 3) {
+</span></span><span style="display:flex;"><span>    System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;Giá trị đếm: &#34;</span> <span style="color:#f92672">+</span> dem);
+</span></span><span style="display:flex;"><span>    dem<span style="color:#f92672">++</span>; <span style="color:#75715e">// Bước thoát: đảm bảo vòng lặp dừng lại</span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h4 id="3-vòng-lặp-do-while">3. Vòng Lặp do-while</h4>
+<p>Khối lệnh được thực thi ít nhất một lần, sau đó mới kiểm tra điều kiện lặp.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> 10;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">do</span> {
+</span></span><span style="display:flex;"><span>    System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;Chạy ít nhất một lần (vì i = 10)&#34;</span>);
+</span></span><span style="display:flex;"><span>    i<span style="color:#f92672">++</span>;
+</span></span><span style="display:flex;"><span>} <span style="color:#66d9ef">while</span> (i <span style="color:#f92672">&lt;</span> 5); <span style="color:#75715e">// Điều kiện này sai ngay lần đầu, nhưng khối lệnh vẫn chạy 1 lần</span>
+</span></span></code></pre></div><h3 id="iv-lệnh-điều-khiển-vòng-lặp">IV. Lệnh Điều Khiển Vòng Lặp</h3>
+<p>Đây là các lệnh dùng để thay đổi luồng hoạt động của vòng lặp:</p>
+<table>
+  <thead>
+      <tr>
+          <th style="text-align: left">Lệnh</th>
+          <th style="text-align: left">Ý nghĩa</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left"><strong><code>break</code></strong></td>
+          <td style="text-align: left">Thoát <strong>hoàn toàn</strong> khỏi vòng lặp hiện tại.</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong><code>continue</code></strong></td>
+          <td style="text-align: left">Bỏ qua <strong>lần lặp hiện tại</strong> và chuyển sang lần lặp tiếp theo.</td>
+      </tr>
+  </tbody>
+</table>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> j <span style="color:#f92672">=</span> 1; j <span style="color:#f92672">&lt;=</span> 5; j<span style="color:#f92672">++</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (j <span style="color:#f92672">==</span> 3) {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">continue</span>; <span style="color:#75715e">// Khi j=3, bỏ qua lệnh in và nhảy sang j=4</span>
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (j <span style="color:#f92672">==</span> 5) {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">break</span>; <span style="color:#75715e">// Khi j=5, thoát hoàn toàn khỏi vòng lặp</span>
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;Giá trị: &#34;</span> <span style="color:#f92672">+</span> j); <span style="color:#75715e">// Chỉ in ra 1, 2, 4</span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="v-kết-luận">V. Kết Luận</h3>
+<p>Cấu trúc điều khiển là nền tảng của mọi logic phức tạp. Nắm vững các cấu trúc này giúp bạn tạo ra các chương trình thông minh hơn.</p>
+<ul class="pa0">
+  
+   <li class="list di">
+     <a href="/HNTDat0805/MyBlog/tags/java/" class="link f5 grow br-pill ba ph3 pv2 mb2 dib black sans-serif no-underline">Java</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/HNTDat0805/MyBlog/tags/%C4%91i%E1%BB%81u-khi%E1%BB%83n/" class="link f5 grow br-pill ba ph3 pv2 mb2 dib black sans-serif no-underline">Điều Khiển</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/HNTDat0805/MyBlog/tags/if/" class="link f5 grow br-pill ba ph3 pv2 mb2 dib black sans-serif no-underline">If</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/HNTDat0805/MyBlog/tags/switch/" class="link f5 grow br-pill ba ph3 pv2 mb2 dib black sans-serif no-underline">Switch</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/HNTDat0805/MyBlog/tags/loop/" class="link f5 grow br-pill ba ph3 pv2 mb2 dib black sans-serif no-underline">Loop</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/HNTDat0805/MyBlog/tags/v%C3%B2ng-l%E1%BA%B7p/" class="link f5 grow br-pill ba ph3 pv2 mb2 dib black sans-serif no-underline">Vòng Lặp</a>
+   </li>
+  
+</ul>
+<div class="mt6 instapaper_ignoref">
+      
+      
+      </div>
+    </div>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+  <div class="bg-light-gray pa3 nested-list-reset nested-copy-line-height nested-links">
+    <p class="f5 b mb3">Related</p>
+    <ul class="pa0 list">
+	   
+	     <li  class="mb2">
+          <a href="/HNTDat0805/MyBlog/posts/bai3_bien-kieu-du-lieu/">BIẾN VÀ KIỂU DỮ LIỆU</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/HNTDat0805/MyBlog/posts/bai2_cau-truc-co-ban/">CẤU TRÚC CƠ BẢN</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/HNTDat0805/MyBlog/posts/bai1_gioi-thieu-java/">GIỚI THIỆU VỀ JAVA</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/HNTDat0805/MyBlog/posts/bai6_lap-trinh-huong-doi-tuong/">LẬP TRÌNH HƯỚNG ĐỐI TƯỢNG - OOP</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/HNTDat0805/MyBlog/posts/bai8_lap-trinh-socket/">LẬP TRÌNH SOCKET</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/HNTDat0805/MyBlog/posts/bai9_da-luong/">LẬP TRÌNH ĐA LUỒNG (MULTITHREADING)</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/HNTDat0805/MyBlog/posts/bai5_mang-va-chuoi/">MẢNG VÀ CHUỖI</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/HNTDat0805/MyBlog/posts/bai7_xu-ly-ngoai-le/">XỬ LÝ NGOẠI LỆ</a>
+        </li>
+	    
+    </ul>
+</div>
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white white-70 dn dib-ns pv2 ph3 no-underline" href="https://github.com/HNTDat0805/MyBlog/" >
+    &copy;  Blog Java & JavaScript 2025 
+  </a>
+    <div><div class="ananke-socials"></div>
+</div>
+  </div>
+</footer>
+
+  </body>
+</html>

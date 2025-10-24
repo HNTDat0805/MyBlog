@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>MẢNG VÀ CHUỖI | Blog Java &amp; JavaScript</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="Tìm hiểu về mảng một chiều, mảng đa chiều và các phương thức cơ bản của đối tượng String.">
+    <meta name="generator" content="Hugo 0.150.0">
+    
+    
+    
+      <meta name="robots" content="index, follow">
+    
+    <meta name="author" content="Hồ Nguyễn Tấn Đạt">
+    
+
+    
+<link rel="stylesheet" href="/HNTDat0805/MyBlog/ananke/css/main.min.2438bcafd7af9675c426d1a4afcd16cfff18e4e10f401071e45b5ccd3be40a0d.css" >
+
+
+
+  
+    <link rel="stylesheet" href="/HNTDat0805/MyBlog/css/custom.css">
+  
+
+
+    
+
+
+    
+      
+
+    
+
+    
+
+    
+      <link rel="canonical" href="https://github.com/HNTDat0805/MyBlog/posts/bai5_mang-va-chuoi/">
+    
+
+    <meta property="og:url" content="https://github.com/HNTDat0805/MyBlog/posts/bai5_mang-va-chuoi/">
+  <meta property="og:site_name" content="Blog Java & JavaScript">
+  <meta property="og:title" content="MẢNG VÀ CHUỖI">
+  <meta property="og:description" content="Tìm hiểu về mảng một chiều, mảng đa chiều và các phương thức cơ bản của đối tượng String.">
+  <meta property="og:locale" content="vi">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2025-10-23T00:00:00+00:00">
+    <meta property="article:modified_time" content="2025-10-23T00:00:00+00:00">
+    <meta property="article:tag" content="Java">
+    <meta property="article:tag" content="Mảng">
+    <meta property="article:tag" content="Array">
+    <meta property="article:tag" content="Chuỗi">
+    <meta property="article:tag" content="String">
+    <meta property="article:tag" content="Collection">
+
+  <meta itemprop="name" content="MẢNG VÀ CHUỖI">
+  <meta itemprop="description" content="Tìm hiểu về mảng một chiều, mảng đa chiều và các phương thức cơ bản của đối tượng String.">
+  <meta itemprop="datePublished" content="2025-10-23T00:00:00+00:00">
+  <meta itemprop="dateModified" content="2025-10-23T00:00:00+00:00">
+  <meta itemprop="wordCount" content="628">
+  <meta itemprop="keywords" content="Java,Mảng,Array,Chuỗi,String,Collection">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="MẢNG VÀ CHUỖI">
+  <meta name="twitter:description" content="Tìm hiểu về mảng một chiều, mảng đa chiều và các phương thức cơ bản của đối tượng String.">
+
+      
+    
+	
+  </head><body class="ma0 avenir bg-near-white production">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l center items-center justify-between">
+    <a href="/HNTDat0805/MyBlog/" class="f3 fw2 hover-white white-90 dib no-underline">
+      
+        Blog Java &amp; JavaScript
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+        <ul class="pl0 mr3">
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white white-90 no-underline" href="/HNTDat0805/MyBlog/" title="🏠 Trang chủ page">
+              🏠 Trang chủ
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white white-90 no-underline" href="/HNTDat0805/MyBlog/about/" title="👨‍💻 Giới thiệu page">
+              👨‍💻 Giới thiệu
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white white-90 no-underline" href="/HNTDat0805/MyBlog/posts/" title="📰 Blog page">
+              📰 Blog
+            </a>
+          </li>
+          
+        </ul>
+      
+      <div class="ananke-socials"></div>
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  
+  <article class="flex-l mw8 center ph3 flex-wrap justify-between">
+    <header class="mt4 w-100">
+      <aside class="instapaper_ignoref b helvetica tracked ttu">
+          
+        Posts
+      </aside><div id="sharing" class="mt3 ananke-socials"></div>
+<h1 class="f1 athelas mt3 mb1">MẢNG VÀ CHUỖI</h1>
+      
+      <p class="tracked"><strong>Hồ Nguyễn Tấn Đạt</strong>
+      </p>
+      
+      
+      
+      <time class="f6 mv4 dib tracked" datetime="2025-10-23T00:00:00Z">23-10-2025</time>
+      
+
+      
+      
+        
+        
+        <span class="f6 mv4 dib tracked"> - 3 minutes read </span>
+        <span class="f6 mv4 dib tracked"> - 628 words </span>
+      
+    </header>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><h3 id="i-mảng-arrays">I. Mảng (Arrays)</h3>
+<p><strong>Mảng</strong> là một tập hợp các biến có cùng kiểu dữ liệu, được lưu trữ liên tiếp nhau trong bộ nhớ. Mảng có <strong>kích thước cố định</strong> và các phần tử được truy cập thông qua <strong>chỉ số (index)</strong>, bắt đầu từ 0.</p>
+<h4 id="1-khai-báo-và-khởi-tạo-mảng">1. Khai Báo và Khởi Tạo Mảng</h4>
+<p>Có hai cách chính để tạo mảng:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#75715e">// Cách 1: Khởi tạo với kích thước cố định (Kích thước: 5)</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Các phần tử sẽ được gán giá trị mặc định (0 cho int, null cho String,...)</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span><span style="color:#f92672">[]</span> soNguyen <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#66d9ef">int</span><span style="color:#f92672">[</span>5<span style="color:#f92672">]</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Cách 2: Khởi tạo trực tiếp với các giá trị (Kích thước: 3)</span>
+</span></span><span style="display:flex;"><span>String<span style="color:#f92672">[]</span> tenTraiCay <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#34;Táo&#34;</span>, <span style="color:#e6db74">&#34;Cam&#34;</span>, <span style="color:#e6db74">&#34;Xoài&#34;</span>};
+</span></span></code></pre></div><h4 id="2-truy-cập-và-gán-giá-trị">2. Truy Cập và Gán Giá Trị</h4>
+<p>Phần tử trong mảng được truy cập thông qua chỉ số (index).</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">int</span><span style="color:#f92672">[]</span> diemSo <span style="color:#f92672">=</span> {8, 9, 7};
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Lấy giá trị phần tử thứ nhất (index 0)</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span> diemDauTien <span style="color:#f92672">=</span> diemSo<span style="color:#f92672">[</span>0<span style="color:#f92672">]</span>; <span style="color:#75715e">// diemDauTien = 8</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Gán giá trị mới cho phần tử cuối cùng (index 2)</span>
+</span></span><span style="display:flex;"><span>diemSo<span style="color:#f92672">[</span>2<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> 10;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Lấy kích thước của mảng</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span> kichThuoc <span style="color:#f92672">=</span> diemSo.<span style="color:#a6e22e">length</span>; <span style="color:#75715e">// kichThuoc = 3</span>
+</span></span></code></pre></div><h4 id="3-vòng-lặp-với-mảng">3. Vòng Lặp Với Mảng</h4>
+<p>Sử dụng vòng lặp for truyền thống hoặc for-each để duyệt qua các phần tử.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>String<span style="color:#f92672">[]</span> mauSac <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#34;Đỏ&#34;</span>, <span style="color:#e6db74">&#34;Xanh&#34;</span>, <span style="color:#e6db74">&#34;Vàng&#34;</span>};
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Duyệt bằng for-each (Dễ đọc hơn)</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> (String mau : mauSac) {
+</span></span><span style="display:flex;"><span>    System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(mau);
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Duyệt bằng for truyền thống (Dùng khi cần dùng index)</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> 0; i <span style="color:#f92672">&lt;</span> mauSac.<span style="color:#a6e22e">length</span>; i<span style="color:#f92672">++</span>) {
+</span></span><span style="display:flex;"><span>    System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;Màu thứ &#34;</span> <span style="color:#f92672">+</span> i <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;: &#34;</span> <span style="color:#f92672">+</span> mauSac<span style="color:#f92672">[</span>i<span style="color:#f92672">]</span>);
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h4 id="4-mảng-đa-chiều-multidimensional-arrays">4. Mảng Đa Chiều (Multidimensional Arrays)</h4>
+<p>Thường dùng là mảng hai chiều, giống như một bảng (table) hoặc ma trận (Matrix).</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#75715e">// Mảng 2x3 (2 hàng, 3 cột)</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span><span style="color:#f92672">[][]</span> maTran <span style="color:#f92672">=</span> {
+</span></span><span style="display:flex;"><span>    {1, 2, 3}, <span style="color:#75715e">// Hàng 0</span>
+</span></span><span style="display:flex;"><span>    {4, 5, 6}  <span style="color:#75715e">// Hàng 1</span>
+</span></span><span style="display:flex;"><span>};
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Truy cập phần tử ở Hàng 1, Cột 0 (Giá trị 4)</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span> phanTu <span style="color:#f92672">=</span> maTran<span style="color:#f92672">[</span>1<span style="color:#f92672">][</span>0<span style="color:#f92672">]</span>;
+</span></span></code></pre></div><h3 id="ii-chuỗi-string">II. Chuỗi (String)</h3>
+<p>String là một lớp (Class) và là một kiểu dữ liệu tham chiếu trong Java, được dùng để lưu trữ một chuỗi các ký tự. Chuỗi trong Java là bất biến (Immutable), nghĩa là không thể thay đổi sau khi đã được tạo.</p>
+<h4 id="1-khai-báo-chuỗi">1. Khai Báo Chuỗi</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#75715e">// Cách 1: Dùng String Literal (phổ biến)</span>
+</span></span><span style="display:flex;"><span>String ten <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;John Doe&#34;</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Cách 2: Dùng từ khóa new (tạo đối tượng mới trong bộ nhớ)</span>
+</span></span><span style="display:flex;"><span>String thongDiep <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> String(<span style="color:#e6db74">&#34;Xin chào&#34;</span>);
+</span></span></code></pre></div><h4 id="2-các-phương-thức-methods-thường-dùng">2. Các Phương Thức (Methods) Thường Dùng</h4>
+<p>Lớp String cung cấp nhiều phương thức mạnh mẽ để thao tác và kiểm tra chuỗi.</p>
+<table>
+  <thead>
+      <tr>
+          <th style="text-align: left">Phương thức</th>
+          <th style="text-align: left">Công dụng</th>
+          <th style="text-align: left">Ví dụ</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left"><strong><code>.length()</code></strong></td>
+          <td style="text-align: left">Trả về độ dài của chuỗi.</td>
+          <td style="text-align: left"><code>&quot;Hello&quot;.length()</code> → <code>5</code></td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong><code>.charAt(index)</code></strong></td>
+          <td style="text-align: left">Lấy ký tự tại chỉ số cụ thể.</td>
+          <td style="text-align: left"><code>&quot;Java&quot;.charAt(1)</code> → <code>'a'</code></td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong><code>.substring(start)</code></strong></td>
+          <td style="text-align: left">Trích xuất chuỗi con từ chỉ số <code>start</code>.</td>
+          <td style="text-align: left"><code>&quot;Code&quot;.substring(2)</code> → <code>&quot;de&quot;</code></td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong><code>.equals(other)</code></strong></td>
+          <td style="text-align: left">So sánh giá trị chuỗi (phân biệt hoa thường).</td>
+          <td style="text-align: left"><code>&quot;A&quot;.equals(&quot;a&quot;)</code> → <code>false</code></td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong><code>.equalsIgnoreCase(other)</code></strong></td>
+          <td style="text-align: left">So sánh giá trị chuỗi (không phân biệt hoa thường).</td>
+          <td style="text-align: left"><code>&quot;A&quot;.equalsIgnoreCase(&quot;a&quot;)</code> → <code>true</code></td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong><code>.toUpperCase()</code></strong></td>
+          <td style="text-align: left">Chuyển chuỗi sang chữ hoa.</td>
+          <td style="text-align: left"><code>&quot;hi&quot;.toUpperCase()</code> → <code>&quot;HI&quot;</code></td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong><code>.trim()</code></strong></td>
+          <td style="text-align: left">Loại bỏ khoảng trắng ở đầu và cuối chuỗi.</td>
+          <td style="text-align: left"><code>&quot; hello &quot;.trim()</code> → <code>&quot;hello&quot;</code></td>
+      </tr>
+  </tbody>
+</table>
+<h4 id="3-so-sánh-chuỗi-quan-trọng">3. So Sánh Chuỗi (Quan trọng)</h4>
+<p>Luôn dùng phương thức .equals() để so sánh nội dung của hai chuỗi, không dùng toán tử ==. Toán tử == chỉ so sánh địa chỉ bộ nhớ (tham chiếu), không phải giá trị.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>String s1 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Java&#34;</span>;
+</span></span><span style="display:flex;"><span>String s2 <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> String(<span style="color:#e6db74">&#34;Java&#34;</span>);
+</span></span><span style="display:flex;"><span>String s3 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Java&#34;</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(s1 <span style="color:#f92672">==</span> s2);      <span style="color:#75715e">// false (Địa chỉ khác nhau)</span>
+</span></span><span style="display:flex;"><span>System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(s1.<span style="color:#a6e22e">equals</span>(s2)); <span style="color:#75715e">// true (Giá trị giống nhau)</span>
+</span></span><span style="display:flex;"><span>System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(s1 <span style="color:#f92672">==</span> s3);      <span style="color:#75715e">// true (Do Java tối ưu hóa String Literal, cùng địa chỉ)</span>
+</span></span></code></pre></div><h3 id="iii-kết-luận">III. Kết Luận</h3>
+<p>Mảng cung cấp cách lưu trữ có cấu trúc, còn String là công cụ không thể thiếu để xử lý văn bản.</p>
+<ul class="pa0">
+  
+   <li class="list di">
+     <a href="/HNTDat0805/MyBlog/tags/java/" class="link f5 grow br-pill ba ph3 pv2 mb2 dib black sans-serif no-underline">Java</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/HNTDat0805/MyBlog/tags/m%E1%BA%A3ng/" class="link f5 grow br-pill ba ph3 pv2 mb2 dib black sans-serif no-underline">Mảng</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/HNTDat0805/MyBlog/tags/array/" class="link f5 grow br-pill ba ph3 pv2 mb2 dib black sans-serif no-underline">Array</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/HNTDat0805/MyBlog/tags/chu%E1%BB%97i/" class="link f5 grow br-pill ba ph3 pv2 mb2 dib black sans-serif no-underline">Chuỗi</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/HNTDat0805/MyBlog/tags/string/" class="link f5 grow br-pill ba ph3 pv2 mb2 dib black sans-serif no-underline">String</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/HNTDat0805/MyBlog/tags/collection/" class="link f5 grow br-pill ba ph3 pv2 mb2 dib black sans-serif no-underline">Collection</a>
+   </li>
+  
+</ul>
+<div class="mt6 instapaper_ignoref">
+      
+      
+      </div>
+    </div>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+  <div class="bg-light-gray pa3 nested-list-reset nested-copy-line-height nested-links">
+    <p class="f5 b mb3">Related</p>
+    <ul class="pa0 list">
+	   
+	     <li  class="mb2">
+          <a href="/HNTDat0805/MyBlog/posts/bai3_bien-kieu-du-lieu/">BIẾN VÀ KIỂU DỮ LIỆU</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/HNTDat0805/MyBlog/posts/bai2_cau-truc-co-ban/">CẤU TRÚC CƠ BẢN</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/HNTDat0805/MyBlog/posts/bai4_cau-truc-dieu-khien/">CẤU TRÚC ĐIỀU KHIỂN</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/HNTDat0805/MyBlog/posts/bai1_gioi-thieu-java/">GIỚI THIỆU VỀ JAVA</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/HNTDat0805/MyBlog/posts/bai6_lap-trinh-huong-doi-tuong/">LẬP TRÌNH HƯỚNG ĐỐI TƯỢNG - OOP</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/HNTDat0805/MyBlog/posts/bai8_lap-trinh-socket/">LẬP TRÌNH SOCKET</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/HNTDat0805/MyBlog/posts/bai9_da-luong/">LẬP TRÌNH ĐA LUỒNG (MULTITHREADING)</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/HNTDat0805/MyBlog/posts/bai7_xu-ly-ngoai-le/">XỬ LÝ NGOẠI LỆ</a>
+        </li>
+	    
+    </ul>
+</div>
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white white-70 dn dib-ns pv2 ph3 no-underline" href="https://github.com/HNTDat0805/MyBlog/" >
+    &copy;  Blog Java & JavaScript 2025 
+  </a>
+    <div><div class="ananke-socials"></div>
+</div>
+  </div>
+</footer>
+
+  </body>
+</html>

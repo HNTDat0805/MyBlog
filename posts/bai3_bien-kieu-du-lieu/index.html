@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>BIẾN VÀ KIỂU DỮ LIỆU | Blog Java &amp; JavaScript</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="Khám phá các kiểu dữ liệu nguyên thủy (Primitive Types), cách khai báo và gán giá trị cho Biến trong Java.">
+    <meta name="generator" content="Hugo 0.150.0">
+    
+    
+    
+      <meta name="robots" content="index, follow">
+    
+    <meta name="author" content="Hồ Nguyễn Tấn Đạt">
+    
+
+    
+<link rel="stylesheet" href="/HNTDat0805/MyBlog/ananke/css/main.min.2438bcafd7af9675c426d1a4afcd16cfff18e4e10f401071e45b5ccd3be40a0d.css" >
+
+
+
+  
+    <link rel="stylesheet" href="/HNTDat0805/MyBlog/css/custom.css">
+  
+
+
+    
+
+
+    
+      
+
+    
+
+    
+
+    
+      <link rel="canonical" href="https://github.com/HNTDat0805/MyBlog/posts/bai3_bien-kieu-du-lieu/">
+    
+
+    <meta property="og:url" content="https://github.com/HNTDat0805/MyBlog/posts/bai3_bien-kieu-du-lieu/">
+  <meta property="og:site_name" content="Blog Java & JavaScript">
+  <meta property="og:title" content="BIẾN VÀ KIỂU DỮ LIỆU">
+  <meta property="og:description" content="Khám phá các kiểu dữ liệu nguyên thủy (Primitive Types), cách khai báo và gán giá trị cho Biến trong Java.">
+  <meta property="og:locale" content="vi">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2025-10-23T00:00:00+00:00">
+    <meta property="article:modified_time" content="2025-10-23T00:00:00+00:00">
+    <meta property="article:tag" content="Java">
+    <meta property="article:tag" content="Biến">
+    <meta property="article:tag" content="Kiểu Dữ Liệu">
+    <meta property="article:tag" content="Primitive">
+    <meta property="article:tag" content="Data Types">
+
+  <meta itemprop="name" content="BIẾN VÀ KIỂU DỮ LIỆU">
+  <meta itemprop="description" content="Khám phá các kiểu dữ liệu nguyên thủy (Primitive Types), cách khai báo và gán giá trị cho Biến trong Java.">
+  <meta itemprop="datePublished" content="2025-10-23T00:00:00+00:00">
+  <meta itemprop="dateModified" content="2025-10-23T00:00:00+00:00">
+  <meta itemprop="wordCount" content="831">
+  <meta itemprop="keywords" content="Java,Biến,Kiểu Dữ Liệu,Primitive,Data Types">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="BIẾN VÀ KIỂU DỮ LIỆU">
+  <meta name="twitter:description" content="Khám phá các kiểu dữ liệu nguyên thủy (Primitive Types), cách khai báo và gán giá trị cho Biến trong Java.">
+
+      
+    
+	
+  </head><body class="ma0 avenir bg-near-white production">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l center items-center justify-between">
+    <a href="/HNTDat0805/MyBlog/" class="f3 fw2 hover-white white-90 dib no-underline">
+      
+        Blog Java &amp; JavaScript
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+        <ul class="pl0 mr3">
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white white-90 no-underline" href="/HNTDat0805/MyBlog/" title="🏠 Trang chủ page">
+              🏠 Trang chủ
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white white-90 no-underline" href="/HNTDat0805/MyBlog/about/" title="👨‍💻 Giới thiệu page">
+              👨‍💻 Giới thiệu
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white white-90 no-underline" href="/HNTDat0805/MyBlog/posts/" title="📰 Blog page">
+              📰 Blog
+            </a>
+          </li>
+          
+        </ul>
+      
+      <div class="ananke-socials"></div>
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  
+  <article class="flex-l mw8 center ph3 flex-wrap justify-between">
+    <header class="mt4 w-100">
+      <aside class="instapaper_ignoref b helvetica tracked ttu">
+          
+        Posts
+      </aside><div id="sharing" class="mt3 ananke-socials"></div>
+<h1 class="f1 athelas mt3 mb1">BIẾN VÀ KIỂU DỮ LIỆU</h1>
+      
+      <p class="tracked"><strong>Hồ Nguyễn Tấn Đạt</strong>
+      </p>
+      
+      
+      
+      <time class="f6 mv4 dib tracked" datetime="2025-10-23T00:00:00Z">23-10-2025</time>
+      
+
+      
+      
+        
+        
+        <span class="f6 mv4 dib tracked"> - 4 minutes read </span>
+        <span class="f6 mv4 dib tracked"> - 831 words </span>
+      
+    </header>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><h3 id="i-biến-variables-là-gì">I. Biến (Variables) Là Gì?</h3>
+<p><strong>Biến</strong> là một vùng nhớ được đặt tên trong bộ nhớ máy tính, dùng để lưu trữ dữ liệu.</p>
+<h4 id="cú-pháp-khai-báo-biến">Cú Pháp Khai Báo Biến</h4>
+<p>Cú pháp cơ bản bao gồm <strong>Kiểu Dữ Liệu</strong> và <strong>Tên Biến</strong>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#75715e">// Cú pháp: [Kiểu Dữ Liệu] [Tên Biến];</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span> soLuong;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Khai báo và gán giá trị ban đầu (Initialization)</span>
+</span></span><span style="display:flex;"><span>String tenHocSinh <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Nguyễn Văn A&#34;</span>;
+</span></span></code></pre></div><h3 id="ii-kiểu-dữ-liệu-nguyên-thủy-primitive-data-types">II. Kiểu Dữ Liệu Nguyên Thủy (Primitive Data Types)</h3>
+<p>Java có 8 kiểu dữ liệu nguyên thủy cơ bản, chúng được dùng để lưu trữ các giá trị đơn lẻ và có kích thước cố định trong bộ nhớ.</p>
+<h4 id="1-các-kiểu-số-nguyên-integers">1. Các Kiểu Số Nguyên (Integers)</h4>
+<p>Các kiểu này dùng để lưu trữ số nguyên (không có phần thập phân).</p>
+<table>
+  <thead>
+      <tr>
+          <th style="text-align: left">Kiểu dữ liệu</th>
+          <th style="text-align: left">Kích thước</th>
+          <th style="text-align: left">Phạm vi giá trị</th>
+          <th style="text-align: left">Ứng dụng phổ biến</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left"><strong><code>byte</code></strong></td>
+          <td style="text-align: left">1 byte</td>
+          <td style="text-align: left">-128 đến 127</td>
+          <td style="text-align: left">Tiết kiệm bộ nhớ trong mảng lớn.</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong><code>short</code></strong></td>
+          <td style="text-align: left">2 bytes</td>
+          <td style="text-align: left">-32,768 đến 32,767</td>
+          <td style="text-align: left">Ít dùng hơn <code>int</code>.</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong><code>int</code></strong></td>
+          <td style="text-align: left">4 bytes</td>
+          <td style="text-align: left">Khoảng +/- 2 tỷ</td>
+          <td style="text-align: left">Kiểu mặc định và phổ biến nhất.</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong><code>long</code></strong></td>
+          <td style="text-align: left">8 bytes</td>
+          <td style="text-align: left">Rất lớn (+/- 9 quintillion)</td>
+          <td style="text-align: left">Lưu trữ số lớn (như ID, timestamp).</td>
+      </tr>
+  </tbody>
+</table>
+<p>Lưu ý: Khi gán giá trị cho long, nên thêm chữ L hoặc l ở cuối.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">int</span> diemSo <span style="color:#f92672">=</span> 100;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">long</span> danSoTheGioi <span style="color:#f92672">=</span> 8000000000L;
+</span></span></code></pre></div><h4 id="2-các-kiểu-số-thực-floating-point-numbers">2. Các Kiểu Số Thực (Floating-Point Numbers)</h4>
+<p>Các kiểu này dùng để lưu trữ số có phần thập phân.</p>
+<table>
+  <thead>
+      <tr>
+          <th style="text-align: left">Kiểu dữ liệu</th>
+          <th style="text-align: left">Kích thước</th>
+          <th style="text-align: left">Độ chính xác</th>
+          <th style="text-align: left">Ứng dụng phổ biến</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left"><strong><code>float</code></strong></td>
+          <td style="text-align: left">4 bytes</td>
+          <td style="text-align: left">Đơn (6-7 chữ số)</td>
+          <td style="text-align: left">Tiết kiệm bộ nhớ.</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong><code>double</code></strong></td>
+          <td style="text-align: left">8 bytes</td>
+          <td style="text-align: left">Kép (15 chữ số)</td>
+          <td style="text-align: left">Kiểu mặc định và chính xác nhất.</td>
+      </tr>
+  </tbody>
+</table>
+<p>Lưu ý: Khi gán giá trị cho float, phải thêm chữ F hoặc f ở cuối.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">double</span> PI <span style="color:#f92672">=</span> 3.<span style="color:#a6e22e">1415926535</span>; <span style="color:#75715e">// Mặc định là double</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">float</span> tyGia <span style="color:#f92672">=</span> 24500.<span style="color:#a6e22e">5f</span>; <span style="color:#75715e">// Bắt buộc phải có &#39;f&#39;</span>
+</span></span></code></pre></div><h4 id="3-kiểu-ký-tự-character">3. Kiểu Ký Tự (Character)</h4>
+<p>Kiểu char dùng để lưu trữ một ký tự đơn, được đặt trong dấu nháy đơn (&rsquo; &lsquo;).</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">char</span> diemA <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;A&#39;</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">char</span> kyTuDacBiet <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;$&#39;</span>;
+</span></span></code></pre></div><h4 id="4-kiểu-logic-boolean">4. Kiểu Logic (Boolean)</h4>
+<p>Kiểu boolean chỉ có hai giá trị: true hoặc false, dùng cho logic điều kiện.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">boolean</span> laSinhVien <span style="color:#f92672">=</span> <span style="color:#66d9ef">true</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">boolean</span> coLoi <span style="color:#f92672">=</span> <span style="color:#66d9ef">false</span>;
+</span></span></code></pre></div><h3 id="iii-kiểu-dữ-liệu-tham-chiếu-reference-data-types">III. Kiểu Dữ Liệu Tham Chiếu (Reference Data Types)</h3>
+<p>Không giống như kiểu nguyên thủy, kiểu tham chiếu không lưu trữ trực tiếp giá trị mà lưu trữ địa chỉ (tham chiếu) đến đối tượng trong bộ nhớ.</p>
+<p>Ví dụ: String, Array, Class, Interface.</p>
+<h4 id="1-kiểu-chuỗi-string">1. Kiểu Chuỗi (String)</h4>
+<p>String là kiểu tham chiếu phổ biến nhất, dùng để lưu trữ chuỗi ký tự, được đặt trong dấu nháy kép (&quot; &ldquo;).</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>String tenBlog <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Blog Java&#34;</span>;
+</span></span><span style="display:flex;"><span>String loiChao <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Chào mừng bạn!&#34;</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// String có thể được nối chuỗi (Concatenation)</span>
+</span></span><span style="display:flex;"><span>String thongBao <span style="color:#f92672">=</span> loiChao <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34; Đến với &#34;</span> <span style="color:#f92672">+</span> tenBlog;
+</span></span></code></pre></div><h4 id="2-mảng-array">2. Mảng (Array)</h4>
+<p>Mảng là một tập hợp các phần tử có cùng kiểu dữ liệu và có kích thước cố định.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#75715e">// Khai báo một mảng các số nguyên (int)</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span><span style="color:#f92672">[]</span> diemThi <span style="color:#f92672">=</span> {90, 85, 95};
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Khai báo một mảng các chuỗi (String)</span>
+</span></span><span style="display:flex;"><span>String<span style="color:#f92672">[]</span> danhSachTen <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> String<span style="color:#f92672">[</span>5<span style="color:#f92672">]</span>;
+</span></span></code></pre></div><h4 id="3-kiểu-lớpđối-tượng-tự-định-nghĩa-classobject">3. Kiểu Lớp/Đối tượng Tự Định Nghĩa (Class/Object)</h4>
+<p>Bất kỳ Class nào bạn tạo ra đều là một kiểu dữ liệu tham chiếu (ví dụ: XeHoi từ Bài 2).</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#75715e">// Giả sử có Class &#39;SinhVien&#39; đã được định nghĩa</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Tạo một đối tượng (tham chiếu) SinhVien mới</span>
+</span></span><span style="display:flex;"><span>SinhVien svMoi <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> SinhVien(<span style="color:#e6db74">&#34;An&#34;</span>, 20);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// So sánh đối tượng (so sánh địa chỉ bộ nhớ)</span>
+</span></span><span style="display:flex;"><span>SinhVien svKhac <span style="color:#f92672">=</span> svMoi; <span style="color:#75715e">// Hai tham chiếu trỏ về cùng một đối tượng</span>
+</span></span></code></pre></div><h4 id="4-interface-giao-diện-và-wrapper-classes">4. Interface (Giao diện) và Wrapper Classes</h4>
+<p><strong>Interface (Giao diện)</strong>: Dùng để tham chiếu đến các đối tượng triển khai giao diện đó. Ví dụ: List, Map.</p>
+<p><strong>Wrapper Classes</strong>: Các lớp bao bọc (Object) cho các kiểu nguyên thủy, dùng khi cần xử lý kiểu nguyên thủy như một đối tượng (ví dụ: trong các Collection).</p>
+<h3 id="iv-quy-tắc-gán-giá-trị-assignment-và-ép-kiểu-casting">IV. Quy Tắc Gán Giá Trị (Assignment) và Ép Kiểu (Casting)</h3>
+<h4 id="1-gán-giá-trị-assignment">1. Gán Giá Trị (Assignment)</h4>
+<p>Sử dụng toán tử = để gán giá trị cho biến.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">int</span> x <span style="color:#f92672">=</span> 10;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>x <span style="color:#f92672">=</span> 20; <span style="color:#75715e">// Giá trị mới là 20</span>
+</span></span></code></pre></div><h4 id="2-ép-kiểu-type-casting">2. Ép Kiểu (Type Casting)</h4>
+<ul>
+<li><strong>Ép kiểu</strong> là chuyển đổi giá trị từ kiểu dữ liệu này sang kiểu dữ liệu khác.</li>
+<li><strong>Ép kiểu Ngầm Định (Implicit Casting)</strong>: Xảy ra tự động khi chuyển từ kiểu nhỏ hơn sang kiểu lớn hơn (không mất mát dữ liệu).</li>
+</ul>
+<ul>
+<li>Thứ tự: <code>byte</code> → <code>short</code> → <code>int</code> → <code>long</code> → <code>float</code> → <code>double</code>.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">int</span> a <span style="color:#f92672">=</span> 100;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">double</span> b <span style="color:#f92672">=</span> a; <span style="color:#75715e">// Implicit: b = 100.0 (tự động)</span>
+</span></span></code></pre></div><ul>
+<li><strong>Ép kiểu Tường Minh (Explicit Casting)</strong>: Phải khai báo kiểu dữ liệu đích (có thể gây mất mát dữ liệu).</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">double</span> c <span style="color:#f92672">=</span> 10.<span style="color:#a6e22e">99</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span> d <span style="color:#f92672">=</span> (<span style="color:#66d9ef">int</span>) c; <span style="color:#75715e">// Explicit: d = 10 (mất phần thập phân .99)</span>
+</span></span></code></pre></div><h3 id="v-tổng-kết-lưu-trữ-hiệu-quả">V. Tổng Kết: Lưu Trữ Hiệu Quả</h3>
+<p>Việc chọn kiểu dữ liệu phù hợp giúp tối ưu hóa bộ nhớ và độ chính xác của chương trình.</p>
+<ul class="pa0">
+  
+   <li class="list di">
+     <a href="/HNTDat0805/MyBlog/tags/java/" class="link f5 grow br-pill ba ph3 pv2 mb2 dib black sans-serif no-underline">Java</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/HNTDat0805/MyBlog/tags/bi%E1%BA%BFn/" class="link f5 grow br-pill ba ph3 pv2 mb2 dib black sans-serif no-underline">Biến</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/HNTDat0805/MyBlog/tags/ki%E1%BB%83u-d%E1%BB%AF-li%E1%BB%87u/" class="link f5 grow br-pill ba ph3 pv2 mb2 dib black sans-serif no-underline">Kiểu Dữ Liệu</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/HNTDat0805/MyBlog/tags/primitive/" class="link f5 grow br-pill ba ph3 pv2 mb2 dib black sans-serif no-underline">Primitive</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/HNTDat0805/MyBlog/tags/data-types/" class="link f5 grow br-pill ba ph3 pv2 mb2 dib black sans-serif no-underline">Data Types</a>
+   </li>
+  
+</ul>
+<div class="mt6 instapaper_ignoref">
+      
+      
+      </div>
+    </div>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+  <div class="bg-light-gray pa3 nested-list-reset nested-copy-line-height nested-links">
+    <p class="f5 b mb3">Related</p>
+    <ul class="pa0 list">
+	   
+	     <li  class="mb2">
+          <a href="/HNTDat0805/MyBlog/posts/bai2_cau-truc-co-ban/">CẤU TRÚC CƠ BẢN</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/HNTDat0805/MyBlog/posts/bai4_cau-truc-dieu-khien/">CẤU TRÚC ĐIỀU KHIỂN</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/HNTDat0805/MyBlog/posts/bai1_gioi-thieu-java/">GIỚI THIỆU VỀ JAVA</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/HNTDat0805/MyBlog/posts/bai6_lap-trinh-huong-doi-tuong/">LẬP TRÌNH HƯỚNG ĐỐI TƯỢNG - OOP</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/HNTDat0805/MyBlog/posts/bai8_lap-trinh-socket/">LẬP TRÌNH SOCKET</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/HNTDat0805/MyBlog/posts/bai9_da-luong/">LẬP TRÌNH ĐA LUỒNG (MULTITHREADING)</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/HNTDat0805/MyBlog/posts/bai5_mang-va-chuoi/">MẢNG VÀ CHUỖI</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/HNTDat0805/MyBlog/posts/bai7_xu-ly-ngoai-le/">XỬ LÝ NGOẠI LỆ</a>
+        </li>
+	    
+    </ul>
+</div>
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white white-70 dn dib-ns pv2 ph3 no-underline" href="https://github.com/HNTDat0805/MyBlog/" >
+    &copy;  Blog Java & JavaScript 2025 
+  </a>
+    <div><div class="ananke-socials"></div>
+</div>
+  </div>
+</footer>
+
+  </body>
+</html>

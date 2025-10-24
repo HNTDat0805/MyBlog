@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>XỬ LÝ NGOẠI LỆ | Blog Java &amp; JavaScript</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="Tìm hiểu cách quản lý lỗi bằng try-catch-finally, các loại ngoại lệ, và cách thao tác cơ bản với File I/O trong Java.">
+    <meta name="generator" content="Hugo 0.150.0">
+    
+    
+    
+      <meta name="robots" content="index, follow">
+    
+    <meta name="author" content="Hồ Nguyễn Tấn Đạt">
+    
+
+    
+<link rel="stylesheet" href="/HNTDat0805/MyBlog/ananke/css/main.min.2438bcafd7af9675c426d1a4afcd16cfff18e4e10f401071e45b5ccd3be40a0d.css" >
+
+
+
+  
+    <link rel="stylesheet" href="/HNTDat0805/MyBlog/css/custom.css">
+  
+
+
+    
+
+
+    
+      
+
+    
+
+    
+
+    
+      <link rel="canonical" href="https://github.com/HNTDat0805/MyBlog/posts/bai7_xu-ly-ngoai-le/">
+    
+
+    <meta property="og:url" content="https://github.com/HNTDat0805/MyBlog/posts/bai7_xu-ly-ngoai-le/">
+  <meta property="og:site_name" content="Blog Java & JavaScript">
+  <meta property="og:title" content="XỬ LÝ NGOẠI LỆ">
+  <meta property="og:description" content="Tìm hiểu cách quản lý lỗi bằng try-catch-finally, các loại ngoại lệ, và cách thao tác cơ bản với File I/O trong Java.">
+  <meta property="og:locale" content="vi">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2025-10-23T00:00:00+00:00">
+    <meta property="article:modified_time" content="2025-10-23T00:00:00+00:00">
+    <meta property="article:tag" content="Java">
+    <meta property="article:tag" content="Exception">
+    <meta property="article:tag" content="Ngoại Lệ">
+    <meta property="article:tag" content="Try-Catch">
+    <meta property="article:tag" content="File">
+    <meta property="article:tag" content="Io">
+
+  <meta itemprop="name" content="XỬ LÝ NGOẠI LỆ">
+  <meta itemprop="description" content="Tìm hiểu cách quản lý lỗi bằng try-catch-finally, các loại ngoại lệ, và cách thao tác cơ bản với File I/O trong Java.">
+  <meta itemprop="datePublished" content="2025-10-23T00:00:00+00:00">
+  <meta itemprop="dateModified" content="2025-10-23T00:00:00+00:00">
+  <meta itemprop="wordCount" content="554">
+  <meta itemprop="keywords" content="Java,Exception,Ngoại Lệ,Try-Catch,File,Io">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="XỬ LÝ NGOẠI LỆ">
+  <meta name="twitter:description" content="Tìm hiểu cách quản lý lỗi bằng try-catch-finally, các loại ngoại lệ, và cách thao tác cơ bản với File I/O trong Java.">
+
+      
+    
+	
+  </head><body class="ma0 avenir bg-near-white production">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l center items-center justify-between">
+    <a href="/HNTDat0805/MyBlog/" class="f3 fw2 hover-white white-90 dib no-underline">
+      
+        Blog Java &amp; JavaScript
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+        <ul class="pl0 mr3">
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white white-90 no-underline" href="/HNTDat0805/MyBlog/" title="🏠 Trang chủ page">
+              🏠 Trang chủ
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white white-90 no-underline" href="/HNTDat0805/MyBlog/about/" title="👨‍💻 Giới thiệu page">
+              👨‍💻 Giới thiệu
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white white-90 no-underline" href="/HNTDat0805/MyBlog/posts/" title="📰 Blog page">
+              📰 Blog
+            </a>
+          </li>
+          
+        </ul>
+      
+      <div class="ananke-socials"></div>
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  
+  <article class="flex-l mw8 center ph3 flex-wrap justify-between">
+    <header class="mt4 w-100">
+      <aside class="instapaper_ignoref b helvetica tracked ttu">
+          
+        Posts
+      </aside><div id="sharing" class="mt3 ananke-socials"></div>
+<h1 class="f1 athelas mt3 mb1">XỬ LÝ NGOẠI LỆ</h1>
+      
+      <p class="tracked"><strong>Hồ Nguyễn Tấn Đạt</strong>
+      </p>
+      
+      
+      
+      <time class="f6 mv4 dib tracked" datetime="2025-10-23T00:00:00Z">23-10-2025</time>
+      
+
+      
+      
+        
+        
+        <span class="f6 mv4 dib tracked"> - 3 minutes read </span>
+        <span class="f6 mv4 dib tracked"> - 554 words </span>
+      
+    </header>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><h3 id="i-xử-lý-ngoại-lệ-exception-handling">I. Xử Lý Ngoại Lệ (Exception Handling)</h3>
+<p>Khi chương trình gặp lỗi trong quá trình thực thi, Java sinh ra <strong>ngoại lệ (Exception)</strong>. Xử lý ngoại lệ là kỹ thuật giúp chương trình không bị dừng đột ngột (crash).</p>
+<h4 id="1-khối-try-catch-finally">1. Khối <code>try-catch-finally</code></h4>
+<p>Đây là cấu trúc cơ bản để quản lý ngoại lệ:</p>
+<ul>
+<li><strong><code>try</code>:</strong> Chứa đoạn code có khả năng sinh ra lỗi.</li>
+<li><strong><code>catch</code>:</strong> Bắt và xử lý loại ngoại lệ cụ thể nếu lỗi xảy ra.</li>
+<li><strong><code>finally</code>:</strong> Khối code <strong>luôn luôn</strong> được thực thi, dù ngoại lệ có xảy ra hay không (thường dùng để dọn dẹp tài nguyên).</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">try</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// Code có thể gây lỗi (ví dụ: chia cho 0)</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> ketQua <span style="color:#f92672">=</span> 10 <span style="color:#f92672">/</span> 0;
+</span></span><span style="display:flex;"><span>    System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(ketQua);
+</span></span><span style="display:flex;"><span>} <span style="color:#66d9ef">catch</span> (ArithmeticException e) {
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// Bắt và xử lý ngoại lệ chia cho 0</span>
+</span></span><span style="display:flex;"><span>    System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;Lỗi: Không thể chia cho 0.&#34;</span>);
+</span></span><span style="display:flex;"><span>} <span style="color:#66d9ef">finally</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// Luôn chạy</span>
+</span></span><span style="display:flex;"><span>    System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;Quá trình tính toán kết thúc.&#34;</span>);
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h4 id="2-các-loại-ngoại-lệ-chính">2. Các Loại Ngoại Lệ Chính</h4>
+<p>Java phân loại ngoại lệ thành ba nhóm chính, tất cả đều là các lớp con của Throwable:</p>
+<table>
+  <thead>
+      <tr>
+          <th style="text-align: left">Loại Ngoại Lệ</th>
+          <th style="text-align: left">Mô tả</th>
+          <th style="text-align: left">Bắt buộc xử lý?</th>
+          <th style="text-align: left">Ví dụ phổ biến</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left"><strong>Checked</strong></td>
+          <td style="text-align: left">Lỗi có thể phục hồi, thường liên quan đến môi trường bên ngoài (tệp, mạng).</td>
+          <td style="text-align: left"><strong>Bắt buộc</strong> (<code>try-catch</code> hoặc <code>throws</code>).</td>
+          <td style="text-align: left"><code>IOException</code>, <code>SQLException</code></td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong>Unchecked</strong></td>
+          <td style="text-align: left">Lỗi lập trình (logic sai, dữ liệu không hợp lệ).</td>
+          <td style="text-align: left"><strong>Không bắt buộc</strong> (Nên sửa code).</td>
+          <td style="text-align: left"><code>NullPointerException</code>, <code>ArithmeticException</code></td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong>Error</strong></td>
+          <td style="text-align: left">Lỗi nghiêm trọng ngoài tầm kiểm soát của ứng dụng.</td>
+          <td style="text-align: left">Không (Không thể phục hồi).</td>
+          <td style="text-align: left"><code>OutOfMemoryError</code>, <code>StackOverflowError</code></td>
+      </tr>
+  </tbody>
+</table>
+<h4 id="3-từ-khóa-throws">3. Từ Khóa throws</h4>
+<p>Dùng để ủy quyền việc xử lý ngoại lệ cho phương thức gọi nó. Chỉ sử dụng cho Checked Exceptions.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#75715e">// Phương thức này thông báo nó có thể ném ra IOException</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">docTep</span>() <span style="color:#66d9ef">throws</span> IOException {
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// Giả sử code đọc tệp ở đây</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">throw</span> <span style="color:#66d9ef">new</span> IOException(<span style="color:#e6db74">&#34;Không tìm thấy tệp.&#34;</span>);
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="ii-làm-việc-với-tệp-file-io">II. Làm Việc Với Tệp (File I/O)</h3>
+<p>I/O (Input/Output) là quá trình chương trình tương tác với thế giới bên ngoài (tệp, mạng, console).</p>
+<h4 id="1-lớp-file">1. Lớp File</h4>
+<p>Lớp java.io.File được dùng để đại diện cho một tệp hoặc thư mục trong hệ thống, chứ không phải nội dung bên trong tệp.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#f92672">import</span> java.io.File;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Tạo đối tượng đại diện cho tệp &#39;data.txt&#39;</span>
+</span></span><span style="display:flex;"><span>File tep <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> File(<span style="color:#e6db74">&#34;data.txt&#34;</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Các phương thức cơ bản</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">boolean</span> tonTai <span style="color:#f92672">=</span> tep.<span style="color:#a6e22e">exists</span>();
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">boolean</span> daTao <span style="color:#f92672">=</span> tep.<span style="color:#a6e22e">createNewFile</span>(); <span style="color:#75715e">// Tạo tệp mới</span>
+</span></span></code></pre></div><h4 id="2-đọc-dữ-liệu-từ-tệp">2. Đọc Dữ Liệu từ Tệp</h4>
+<p>Thường dùng lớp Scanner (cho văn bản đơn giản) hoặc BufferedReader (cho hiệu suất cao).</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#f92672">import</span> java.io.File;
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> java.util.Scanner;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">try</span> {
+</span></span><span style="display:flex;"><span>    File myObj <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> File(<span style="color:#e6db74">&#34;ten_tep.txt&#34;</span>);
+</span></span><span style="display:flex;"><span>    Scanner myReader <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Scanner(myObj);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">while</span> (myReader.<span style="color:#a6e22e">hasNextLine</span>()) {
+</span></span><span style="display:flex;"><span>        String data <span style="color:#f92672">=</span> myReader.<span style="color:#a6e22e">nextLine</span>();
+</span></span><span style="display:flex;"><span>        System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(data);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    myReader.<span style="color:#a6e22e">close</span>();
+</span></span><span style="display:flex;"><span>} <span style="color:#66d9ef">catch</span> (FileNotFoundException e) {
+</span></span><span style="display:flex;"><span>    System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;Không tìm thấy tệp.&#34;</span>);
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h4 id="3-ghi-dữ-liệu-vào-tệp">3. Ghi Dữ Liệu vào Tệp</h4>
+<p>Thường dùng lớp FileWriter hoặc PrintWriter.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#f92672">import</span> java.io.FileWriter;
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> java.io.IOException;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">try</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// Tham số &#39;true&#39; nghĩa là ghi tiếp (append), nếu là &#39;false&#39; sẽ ghi đè</span>
+</span></span><span style="display:flex;"><span>    FileWriter writer <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> FileWriter(<span style="color:#e6db74">&#34;ten_tep_ghi.txt&#34;</span>, <span style="color:#66d9ef">true</span>);
+</span></span><span style="display:flex;"><span>    writer.<span style="color:#a6e22e">write</span>(<span style="color:#e6db74">&#34;Thêm dòng mới vào tệp.\n&#34;</span>);
+</span></span><span style="display:flex;"><span>    writer.<span style="color:#a6e22e">close</span>(); <span style="color:#75715e">// Quan trọng: Phải đóng tài nguyên</span>
+</span></span><span style="display:flex;"><span>    System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;Ghi tệp thành công.&#34;</span>);
+</span></span><span style="display:flex;"><span>} <span style="color:#66d9ef">catch</span> (IOException e) {
+</span></span><span style="display:flex;"><span>    System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;Xảy ra lỗi khi ghi tệp.&#34;</span>);
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h4 id="iii-kết-luận">III. Kết Luận</h4>
+<p>Xử lý ngoại lệ là bắt buộc để tạo ra các chương trình ổn định. Làm việc với tệp mở ra cánh cửa để chương trình tương tác với dữ liệu bên ngoài.</p>
+<ul class="pa0">
+  
+   <li class="list di">
+     <a href="/HNTDat0805/MyBlog/tags/java/" class="link f5 grow br-pill ba ph3 pv2 mb2 dib black sans-serif no-underline">Java</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/HNTDat0805/MyBlog/tags/exception/" class="link f5 grow br-pill ba ph3 pv2 mb2 dib black sans-serif no-underline">Exception</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/HNTDat0805/MyBlog/tags/ngo%E1%BA%A1i-l%E1%BB%87/" class="link f5 grow br-pill ba ph3 pv2 mb2 dib black sans-serif no-underline">Ngoại Lệ</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/HNTDat0805/MyBlog/tags/try-catch/" class="link f5 grow br-pill ba ph3 pv2 mb2 dib black sans-serif no-underline">Try-Catch</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/HNTDat0805/MyBlog/tags/file/" class="link f5 grow br-pill ba ph3 pv2 mb2 dib black sans-serif no-underline">File</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/HNTDat0805/MyBlog/tags/io/" class="link f5 grow br-pill ba ph3 pv2 mb2 dib black sans-serif no-underline">Io</a>
+   </li>
+  
+</ul>
+<div class="mt6 instapaper_ignoref">
+      
+      
+      </div>
+    </div>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+  <div class="bg-light-gray pa3 nested-list-reset nested-copy-line-height nested-links">
+    <p class="f5 b mb3">Related</p>
+    <ul class="pa0 list">
+	   
+	     <li  class="mb2">
+          <a href="/HNTDat0805/MyBlog/posts/bai3_bien-kieu-du-lieu/">BIẾN VÀ KIỂU DỮ LIỆU</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/HNTDat0805/MyBlog/posts/bai2_cau-truc-co-ban/">CẤU TRÚC CƠ BẢN</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/HNTDat0805/MyBlog/posts/bai4_cau-truc-dieu-khien/">CẤU TRÚC ĐIỀU KHIỂN</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/HNTDat0805/MyBlog/posts/bai1_gioi-thieu-java/">GIỚI THIỆU VỀ JAVA</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/HNTDat0805/MyBlog/posts/bai6_lap-trinh-huong-doi-tuong/">LẬP TRÌNH HƯỚNG ĐỐI TƯỢNG - OOP</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/HNTDat0805/MyBlog/posts/bai8_lap-trinh-socket/">LẬP TRÌNH SOCKET</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/HNTDat0805/MyBlog/posts/bai9_da-luong/">LẬP TRÌNH ĐA LUỒNG (MULTITHREADING)</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/HNTDat0805/MyBlog/posts/bai5_mang-va-chuoi/">MẢNG VÀ CHUỖI</a>
+        </li>
+	    
+    </ul>
+</div>
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white white-70 dn dib-ns pv2 ph3 no-underline" href="https://github.com/HNTDat0805/MyBlog/" >
+    &copy;  Blog Java & JavaScript 2025 
+  </a>
+    <div><div class="ananke-socials"></div>
+</div>
+  </div>
+</footer>
+
+  </body>
+</html>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Đồng Bộ Hóa on Blog Java &amp; JavaScript</title>
+    <link>https://github.com/HNTDat0805/MyBlog/tags/%C4%91%E1%BB%93ng-b%E1%BB%99-h%C3%B3a/</link>
+    <description>Recent content in Đồng Bộ Hóa on Blog Java &amp; JavaScript</description>
+    <generator>Hugo</generator>
+    <language>vi</language>
+    <lastBuildDate>Thu, 23 Oct 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://github.com/HNTDat0805/MyBlog/tags/%C4%91%E1%BB%93ng-b%E1%BB%99-h%C3%B3a/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>LẬP TRÌNH ĐA LUỒNG (MULTITHREADING)</title>
+      <link>https://github.com/HNTDat0805/MyBlog/posts/bai9_da-luong/</link>
+      <pubDate>Thu, 23 Oct 2025 00:00:00 +0000</pubDate>
+      <guid>https://github.com/HNTDat0805/MyBlog/posts/bai9_da-luong/</guid>
+      <description>&lt;h3 id=&#34;i-giới-thiệu-đa-luồng-multithreading&#34;&gt;I. Giới Thiệu Đa Luồng (Multithreading)&lt;/h3&gt;&#xA;&lt;p&gt;Trong thực tế, nhiều chương trình cần xử lý đồng thời nhiều tác vụ (ví dụ: vừa tải ảnh, vừa phát nhạc, vừa phản hồi thao tác người dùng). &lt;strong&gt;Đa luồng&lt;/strong&gt; là khả năng cho phép chương trình thực thi nhiều phần của code (gọi là &lt;strong&gt;luồng - Thread&lt;/strong&gt;) một cách đồng thời (concurrently).&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Process (Tiến trình):&lt;/strong&gt; Một ứng dụng hoặc chương trình đang chạy. Mỗi tiến trình có không gian bộ nhớ riêng.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Thread (Luồng):&lt;/strong&gt; Một đơn vị thực thi nhỏ nhất trong một Process. Các luồng trong cùng một Process chia sẻ cùng không gian bộ nhớ.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;ii-các-cách-tạo-luồng-threads&#34;&gt;II. Các Cách Tạo Luồng (Threads)&lt;/h3&gt;&#xA;&lt;p&gt;Có hai cách chính để tạo và chạy một luồng trong Java:&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

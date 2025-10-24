@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>LẬP TRÌNH ĐA LUỒNG (MULTITHREADING) | Blog Java &amp; JavaScript</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="Tìm hiểu về Luồng (Thread), cách tạo luồng bằng Runnable và Thread Class, và khái niệm đồng bộ hóa (Synchronization).">
+    <meta name="generator" content="Hugo 0.150.0">
+    
+    
+    
+      <meta name="robots" content="index, follow">
+    
+    <meta name="author" content="Hồ Nguyễn Tấn Đạt">
+    
+
+    
+<link rel="stylesheet" href="/HNTDat0805/MyBlog/ananke/css/main.min.2438bcafd7af9675c426d1a4afcd16cfff18e4e10f401071e45b5ccd3be40a0d.css" >
+
+
+
+  
+    <link rel="stylesheet" href="/HNTDat0805/MyBlog/css/custom.css">
+  
+
+
+    
+
+
+    
+      
+
+    
+
+    
+
+    
+      <link rel="canonical" href="https://github.com/HNTDat0805/MyBlog/posts/bai9_da-luong/">
+    
+
+    <meta property="og:url" content="https://github.com/HNTDat0805/MyBlog/posts/bai9_da-luong/">
+  <meta property="og:site_name" content="Blog Java & JavaScript">
+  <meta property="og:title" content="LẬP TRÌNH ĐA LUỒNG (MULTITHREADING)">
+  <meta property="og:description" content="Tìm hiểu về Luồng (Thread), cách tạo luồng bằng Runnable và Thread Class, và khái niệm đồng bộ hóa (Synchronization).">
+  <meta property="og:locale" content="vi">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2025-10-23T00:00:00+00:00">
+    <meta property="article:modified_time" content="2025-10-23T00:00:00+00:00">
+    <meta property="article:tag" content="Java">
+    <meta property="article:tag" content="Multithreading">
+    <meta property="article:tag" content="Thread">
+    <meta property="article:tag" content="Concurrent">
+    <meta property="article:tag" content="Đồng Bộ Hóa">
+
+  <meta itemprop="name" content="LẬP TRÌNH ĐA LUỒNG (MULTITHREADING)">
+  <meta itemprop="description" content="Tìm hiểu về Luồng (Thread), cách tạo luồng bằng Runnable và Thread Class, và khái niệm đồng bộ hóa (Synchronization).">
+  <meta itemprop="datePublished" content="2025-10-23T00:00:00+00:00">
+  <meta itemprop="dateModified" content="2025-10-23T00:00:00+00:00">
+  <meta itemprop="wordCount" content="544">
+  <meta itemprop="keywords" content="Java,Multithreading,Thread,Concurrent,Đồng Bộ Hóa">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="LẬP TRÌNH ĐA LUỒNG (MULTITHREADING)">
+  <meta name="twitter:description" content="Tìm hiểu về Luồng (Thread), cách tạo luồng bằng Runnable và Thread Class, và khái niệm đồng bộ hóa (Synchronization).">
+
+      
+    
+	
+  </head><body class="ma0 avenir bg-near-white production">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l center items-center justify-between">
+    <a href="/HNTDat0805/MyBlog/" class="f3 fw2 hover-white white-90 dib no-underline">
+      
+        Blog Java &amp; JavaScript
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+        <ul class="pl0 mr3">
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white white-90 no-underline" href="/HNTDat0805/MyBlog/" title="🏠 Trang chủ page">
+              🏠 Trang chủ
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white white-90 no-underline" href="/HNTDat0805/MyBlog/about/" title="👨‍💻 Giới thiệu page">
+              👨‍💻 Giới thiệu
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white white-90 no-underline" href="/HNTDat0805/MyBlog/posts/" title="📰 Blog page">
+              📰 Blog
+            </a>
+          </li>
+          
+        </ul>
+      
+      <div class="ananke-socials"></div>
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  
+  <article class="flex-l mw8 center ph3 flex-wrap justify-between">
+    <header class="mt4 w-100">
+      <aside class="instapaper_ignoref b helvetica tracked ttu">
+          
+        Posts
+      </aside><div id="sharing" class="mt3 ananke-socials"></div>
+<h1 class="f1 athelas mt3 mb1">LẬP TRÌNH ĐA LUỒNG (MULTITHREADING)</h1>
+      
+      <p class="tracked"><strong>Hồ Nguyễn Tấn Đạt</strong>
+      </p>
+      
+      
+      
+      <time class="f6 mv4 dib tracked" datetime="2025-10-23T00:00:00Z">23-10-2025</time>
+      
+
+      
+      
+        
+        
+        <span class="f6 mv4 dib tracked"> - 3 minutes read </span>
+        <span class="f6 mv4 dib tracked"> - 544 words </span>
+      
+    </header>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><h3 id="i-giới-thiệu-đa-luồng-multithreading">I. Giới Thiệu Đa Luồng (Multithreading)</h3>
+<p>Trong thực tế, nhiều chương trình cần xử lý đồng thời nhiều tác vụ (ví dụ: vừa tải ảnh, vừa phát nhạc, vừa phản hồi thao tác người dùng). <strong>Đa luồng</strong> là khả năng cho phép chương trình thực thi nhiều phần của code (gọi là <strong>luồng - Thread</strong>) một cách đồng thời (concurrently).</p>
+<ul>
+<li><strong>Process (Tiến trình):</strong> Một ứng dụng hoặc chương trình đang chạy. Mỗi tiến trình có không gian bộ nhớ riêng.</li>
+<li><strong>Thread (Luồng):</strong> Một đơn vị thực thi nhỏ nhất trong một Process. Các luồng trong cùng một Process chia sẻ cùng không gian bộ nhớ.</li>
+</ul>
+<h3 id="ii-các-cách-tạo-luồng-threads">II. Các Cách Tạo Luồng (Threads)</h3>
+<p>Có hai cách chính để tạo và chạy một luồng trong Java:</p>
+<h4 id="1-triển-khai-giao-diện-runnable">1. Triển khai Giao diện <code>Runnable</code></h4>
+<p>Đây là cách được khuyến khích vì nó cho phép lớp của bạn kế thừa các lớp khác nếu cần (Java không đa kế thừa).</p>
+<ol>
+<li>Định nghĩa một lớp triển khai giao diện <code>Runnable</code>.</li>
+<li>Triển khai phương thức <code>run()</code>.</li>
+<li>Tạo đối tượng <code>Thread</code> và truyền đối tượng <code>Runnable</code> vào.</li>
+<li>Gọi phương thức <code>start()</code> của đối tượng <code>Thread</code>.</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">TaskA</span> <span style="color:#66d9ef">implements</span> Runnable {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">@Override</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">run</span>() {
+</span></span><span style="display:flex;"><span>        System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;Luồng Task A đang chạy...&#34;</span>);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span>(String<span style="color:#f92672">[]</span> args) {
+</span></span><span style="display:flex;"><span>    TaskA task <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> TaskA();
+</span></span><span style="display:flex;"><span>    Thread luongMoi <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Thread(task);
+</span></span><span style="display:flex;"><span>    luongMoi.<span style="color:#a6e22e">start</span>(); <span style="color:#75715e">// Gọi start() để JVM tạo luồng và gọi run()</span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h4 id="2-kế-thừa-lớp-thread">2. Kế thừa Lớp Thread</h4>
+<ol>
+<li>
+<p>Định nghĩa một lớp kế thừa lớp Thread.</p>
+</li>
+<li>
+<p>Ghi đè phương thức run().</p>
+</li>
+</ol>
+<p>3 .Tạo đối tượng của lớp đó và gọi start().</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">TaskB</span> <span style="color:#66d9ef">extends</span> Thread {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">@Override</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">run</span>() {
+</span></span><span style="display:flex;"><span>        System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;Luồng Task B đang chạy...&#34;</span>);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span>(String<span style="color:#f92672">[]</span> args) {
+</span></span><span style="display:flex;"><span>    TaskB luongB <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> TaskB();
+</span></span><span style="display:flex;"><span>    luongB.<span style="color:#a6e22e">start</span>();
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="iii-các-phương-thức-điều-khiển-luồng">III. Các Phương Thức Điều Khiển Luồng</h3>
+<table>
+  <thead>
+      <tr>
+          <th style="text-align: left">Phương thức</th>
+          <th style="text-align: left">Công dụng</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left"><strong><code>start()</code></strong></td>
+          <td style="text-align: left">Bắt đầu thực thi luồng bằng cách gọi <code>run()</code>.</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong><code>run()</code></strong></td>
+          <td style="text-align: left">Chứa logic chính của luồng.</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong><code>sleep(ms)</code></strong></td>
+          <td style="text-align: left">Tạm dừng luồng trong một khoảng thời gian (miligiây).</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong><code>join()</code></strong></td>
+          <td style="text-align: left">Chờ luồng khác kết thúc công việc của nó.</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong><code>isAlive()</code></strong></td>
+          <td style="text-align: left">Kiểm tra xem luồng còn đang hoạt động hay không.</td>
+      </tr>
+  </tbody>
+</table>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span>(String<span style="color:#f92672">[]</span> args) {
+</span></span><span style="display:flex;"><span>    Thread luong <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> TaskB();
+</span></span><span style="display:flex;"><span>    luong.<span style="color:#a6e22e">start</span>();
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">try</span> {
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// Main thread sẽ chờ luong kết thúc</span>
+</span></span><span style="display:flex;"><span>        luong.<span style="color:#a6e22e">join</span>();
+</span></span><span style="display:flex;"><span>        System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;Luồng Task B đã hoàn thành.&#34;</span>);
+</span></span><span style="display:flex;"><span>    } <span style="color:#66d9ef">catch</span> (InterruptedException e) {
+</span></span><span style="display:flex;"><span>        Thread.<span style="color:#a6e22e">currentThread</span>().<span style="color:#a6e22e">interrupt</span>();
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="iv-đồng-bộ-hóa-synchronization">IV. Đồng Bộ Hóa (Synchronization)</h3>
+<p>Khi nhiều luồng cùng truy cập và thay đổi cùng một tài nguyên (ví dụ: một biến chung), có thể dẫn đến <strong>điều kiện chạy đua (Race Condition)</strong> và dữ liệu không nhất quán. <strong>Đồng bộ hóa</strong> giải quyết vấn đề này.</p>
+<p>Từ khóa <strong>synchronized</strong>: Khi áp dụng cho một phương thức hoặc khối lệnh, nó đảm bảo rằng tại một thời điểm, chỉ có duy nhất một luồng được phép truy cập khối code đó.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Counter</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">int</span> count <span style="color:#f92672">=</span> 0;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// Phương thức được đồng bộ hóa</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">synchronized</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">tangGiaTri</span>() {
+</span></span><span style="display:flex;"><span>        count<span style="color:#f92672">++</span>; <span style="color:#75715e">// Đảm bảo việc tăng giá trị diễn ra nguyên tử (atomic)</span>
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// ...</span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="v-kết-luận">V. Kết Luận</h3>
+<p>Lập trình đa luồng là một chủ đề phức tạp nhưng cần thiết để xây dựng các ứng dụng hiện đại, phản hồi nhanh. Nắm vững việc tạo luồng và đồng bộ hóa là chìa khóa.</p>
+<ul class="pa0">
+  
+   <li class="list di">
+     <a href="/HNTDat0805/MyBlog/tags/java/" class="link f5 grow br-pill ba ph3 pv2 mb2 dib black sans-serif no-underline">Java</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/HNTDat0805/MyBlog/tags/multithreading/" class="link f5 grow br-pill ba ph3 pv2 mb2 dib black sans-serif no-underline">Multithreading</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/HNTDat0805/MyBlog/tags/thread/" class="link f5 grow br-pill ba ph3 pv2 mb2 dib black sans-serif no-underline">Thread</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/HNTDat0805/MyBlog/tags/concurrent/" class="link f5 grow br-pill ba ph3 pv2 mb2 dib black sans-serif no-underline">Concurrent</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/HNTDat0805/MyBlog/tags/%C4%91%E1%BB%93ng-b%E1%BB%99-h%C3%B3a/" class="link f5 grow br-pill ba ph3 pv2 mb2 dib black sans-serif no-underline">Đồng Bộ Hóa</a>
+   </li>
+  
+</ul>
+<div class="mt6 instapaper_ignoref">
+      
+      
+      </div>
+    </div>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+  <div class="bg-light-gray pa3 nested-list-reset nested-copy-line-height nested-links">
+    <p class="f5 b mb3">Related</p>
+    <ul class="pa0 list">
+	   
+	     <li  class="mb2">
+          <a href="/HNTDat0805/MyBlog/posts/bai3_bien-kieu-du-lieu/">BIẾN VÀ KIỂU DỮ LIỆU</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/HNTDat0805/MyBlog/posts/bai2_cau-truc-co-ban/">CẤU TRÚC CƠ BẢN</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/HNTDat0805/MyBlog/posts/bai4_cau-truc-dieu-khien/">CẤU TRÚC ĐIỀU KHIỂN</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/HNTDat0805/MyBlog/posts/bai1_gioi-thieu-java/">GIỚI THIỆU VỀ JAVA</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/HNTDat0805/MyBlog/posts/bai6_lap-trinh-huong-doi-tuong/">LẬP TRÌNH HƯỚNG ĐỐI TƯỢNG - OOP</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/HNTDat0805/MyBlog/posts/bai8_lap-trinh-socket/">LẬP TRÌNH SOCKET</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/HNTDat0805/MyBlog/posts/bai5_mang-va-chuoi/">MẢNG VÀ CHUỖI</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/HNTDat0805/MyBlog/posts/bai7_xu-ly-ngoai-le/">XỬ LÝ NGOẠI LỆ</a>
+        </li>
+	    
+    </ul>
+</div>
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white white-70 dn dib-ns pv2 ph3 no-underline" href="https://github.com/HNTDat0805/MyBlog/" >
+    &copy;  Blog Java & JavaScript 2025 
+  </a>
+    <div><div class="ananke-socials"></div>
+</div>
+  </div>
+</footer>
+
+  </body>
+</html>

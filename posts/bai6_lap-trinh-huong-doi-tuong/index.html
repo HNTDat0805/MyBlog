@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>LẬP TRÌNH HƯỚNG ĐỐI TƯỢNG - OOP | Blog Java &amp; JavaScript</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="Tìm hiểu các khái niệm cơ bản về OOP (Class, Object), bốn trụ cột của OOP (Kế thừa, Đa hình, Trừu tượng, Đóng gói), và tại sao OOP lại quan trọng trong Java.">
+    <meta name="generator" content="Hugo 0.150.0">
+    
+    
+    
+      <meta name="robots" content="index, follow">
+    
+    <meta name="author" content="Hồ Nguyễn Tấn Đạt">
+    
+
+    
+<link rel="stylesheet" href="/HNTDat0805/MyBlog/ananke/css/main.min.2438bcafd7af9675c426d1a4afcd16cfff18e4e10f401071e45b5ccd3be40a0d.css" >
+
+
+
+  
+    <link rel="stylesheet" href="/HNTDat0805/MyBlog/css/custom.css">
+  
+
+
+    
+
+
+    
+      
+
+    
+
+    
+
+    
+      <link rel="canonical" href="https://github.com/HNTDat0805/MyBlog/posts/bai6_lap-trinh-huong-doi-tuong/">
+    
+
+    <meta property="og:url" content="https://github.com/HNTDat0805/MyBlog/posts/bai6_lap-trinh-huong-doi-tuong/">
+  <meta property="og:site_name" content="Blog Java & JavaScript">
+  <meta property="og:title" content="LẬP TRÌNH HƯỚNG ĐỐI TƯỢNG - OOP">
+  <meta property="og:description" content="Tìm hiểu các khái niệm cơ bản về OOP (Class, Object), bốn trụ cột của OOP (Kế thừa, Đa hình, Trừu tượng, Đóng gói), và tại sao OOP lại quan trọng trong Java.">
+  <meta property="og:locale" content="vi">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2025-10-23T00:00:00+00:00">
+    <meta property="article:modified_time" content="2025-10-23T00:00:00+00:00">
+    <meta property="article:tag" content="Java">
+    <meta property="article:tag" content="Oop">
+    <meta property="article:tag" content="Hướng Đối Tượng">
+    <meta property="article:tag" content="Class">
+    <meta property="article:tag" content="Object">
+    <meta property="article:tag" content="Kế Thừa">
+
+  <meta itemprop="name" content="LẬP TRÌNH HƯỚNG ĐỐI TƯỢNG - OOP">
+  <meta itemprop="description" content="Tìm hiểu các khái niệm cơ bản về OOP (Class, Object), bốn trụ cột của OOP (Kế thừa, Đa hình, Trừu tượng, Đóng gói), và tại sao OOP lại quan trọng trong Java.">
+  <meta itemprop="datePublished" content="2025-10-23T00:00:00+00:00">
+  <meta itemprop="dateModified" content="2025-10-23T00:00:00+00:00">
+  <meta itemprop="wordCount" content="607">
+  <meta itemprop="keywords" content="Java,Oop,Hướng Đối Tượng,Class,Object,Kế Thừa,Đa Hình">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="LẬP TRÌNH HƯỚNG ĐỐI TƯỢNG - OOP">
+  <meta name="twitter:description" content="Tìm hiểu các khái niệm cơ bản về OOP (Class, Object), bốn trụ cột của OOP (Kế thừa, Đa hình, Trừu tượng, Đóng gói), và tại sao OOP lại quan trọng trong Java.">
+
+      
+    
+	
+  </head><body class="ma0 avenir bg-near-white production">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l center items-center justify-between">
+    <a href="/HNTDat0805/MyBlog/" class="f3 fw2 hover-white white-90 dib no-underline">
+      
+        Blog Java &amp; JavaScript
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+        <ul class="pl0 mr3">
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white white-90 no-underline" href="/HNTDat0805/MyBlog/" title="🏠 Trang chủ page">
+              🏠 Trang chủ
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white white-90 no-underline" href="/HNTDat0805/MyBlog/about/" title="👨‍💻 Giới thiệu page">
+              👨‍💻 Giới thiệu
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white white-90 no-underline" href="/HNTDat0805/MyBlog/posts/" title="📰 Blog page">
+              📰 Blog
+            </a>
+          </li>
+          
+        </ul>
+      
+      <div class="ananke-socials"></div>
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  
+  <article class="flex-l mw8 center ph3 flex-wrap justify-between">
+    <header class="mt4 w-100">
+      <aside class="instapaper_ignoref b helvetica tracked ttu">
+          
+        Posts
+      </aside><div id="sharing" class="mt3 ananke-socials"></div>
+<h1 class="f1 athelas mt3 mb1">LẬP TRÌNH HƯỚNG ĐỐI TƯỢNG - OOP</h1>
+      
+      <p class="tracked"><strong>Hồ Nguyễn Tấn Đạt</strong>
+      </p>
+      
+      
+      
+      <time class="f6 mv4 dib tracked" datetime="2025-10-23T00:00:00Z">23-10-2025</time>
+      
+
+      
+      
+        
+        
+        <span class="f6 mv4 dib tracked"> - 3 minutes read </span>
+        <span class="f6 mv4 dib tracked"> - 607 words </span>
+      
+    </header>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><h3 id="i-oop-là-gì-tư-duy-lập-trình-mới">I. OOP Là Gì? Tư Duy Lập Trình Mới</h3>
+<p><strong>Lập trình Hướng Đối Tượng (Object-Oriented Programming - OOP)</strong> là một mô hình lập trình dựa trên khái niệm <strong>Đối tượng (Object)</strong>, trong đó dữ liệu (thuộc tính) và code (phương thức) được đóng gói lại với nhau.</p>
+<p>OOP là nền tảng quan trọng nhất của Java, giúp chúng ta mô hình hóa các thực thể trong thế giới thực vào code, làm cho chương trình trở nên dễ quản lý, linh hoạt và tái sử dụng hơn.</p>
+<h4 id="1-class-và-object-ôn-lại">1. Class và Object (Ôn lại)</h4>
+<ul>
+<li><strong>Lớp (Class):</strong> Một bản thiết kế (Blueprint) định nghĩa cấu trúc của các đối tượng.</li>
+<li><strong>Đối Tượng (Object):</strong> Một thể hiện thực tế của Lớp, chứa dữ liệu (trạng thái) và hành vi (phương thức).</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#75715e">// Lớp (Class)</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">DongVat</span> {
+</span></span><span style="display:flex;"><span>    String ten; <span style="color:#75715e">// Thuộc tính</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// Phương thức</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">keu</span>() {
+</span></span><span style="display:flex;"><span>        System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;Động vật đang kêu.&#34;</span>);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Tạo Đối tượng (Object) trong phương thức main</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span>(String<span style="color:#f92672">[]</span> args) {
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// meoA là một Đối tượng của lớp DongVat</span>
+</span></span><span style="display:flex;"><span>    DongVat meoA <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> DongVat();
+</span></span><span style="display:flex;"><span>    meoA.<span style="color:#a6e22e">ten</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Kitty&#34;</span>;
+</span></span><span style="display:flex;"><span>    meoA.<span style="color:#a6e22e">keu</span>(); <span style="color:#75715e">// Kết quả: Động vật đang kêu.</span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="ii-bốn-trụ-cột-cơ-bản-của-oop">II. Bốn Trụ Cột Cơ Bản của OOP</h3>
+<p>Bốn nguyên tắc chính làm nên sức mạnh của OOP:</p>
+<h4 id="1-đóng-gói-encapsulation">1. Đóng Gói (Encapsulation)</h4>
+<ul>
+<li>
+<p><strong>Khái niệm</strong>: Là cơ chế buộc dữ liệu (thuộc tính) và code (phương thức) lại với nhau thành một đơn vị duy nhất (Class).</p>
+</li>
+<li>
+<p><strong>Mục đích</strong>: Ẩn chi tiết triển khai (implementation details) khỏi người dùng. Dữ liệu thường được khai báo là private và chỉ được truy cập thông qua các phương thức public (Getter/Setter).</p>
+</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">TaiKhoan</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">double</span> soDu; <span style="color:#75715e">// Thuộc tính private (Đóng gói)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// Getter (Truy cập dữ liệu)</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">double</span> <span style="color:#a6e22e">getSoDu</span>() {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> soDu;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// Setter (Thay đổi dữ liệu có kiểm soát)</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">setSoDu</span>(<span style="color:#66d9ef">double</span> soTien) {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> (soTien <span style="color:#f92672">&gt;</span> 0) {
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">soDu</span> <span style="color:#f92672">=</span> soTien;
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h4 id="2-kế-thừa-inheritance">2. Kế Thừa (Inheritance)</h4>
+<ul>
+<li>
+<p><strong>Khái niệm</strong>: Cho phép một lớp (lớp con, Subclass) kế thừa các thuộc tính và phương thức từ một lớp khác (lớp cha, Superclass).</p>
+</li>
+<li>
+<p><strong>Mục đích</strong>: Tái sử dụng code và tạo mối quan hệ &ldquo;là một&rdquo; (Is-a relationship). Dùng từ khóa extends.</p>
+</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#75715e">// Lớp cha</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">HinhHoc</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">ve</span>() {
+</span></span><span style="display:flex;"><span>        System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;Vẽ hình học.&#34;</span>);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Lớp con kế thừa từ HinhHoc</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">HinhTron</span> <span style="color:#66d9ef">extends</span> HinhHoc {
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// HinhTron tự động có phương thức ve() của lớp cha</span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h4 id="3-đa-hình-polymorphism">3. Đa Hình (Polymorphism)</h4>
+<ul>
+<li><strong>Khái niệm</strong>: Nghĩa là &ldquo;đa dạng hình thái&rdquo;. Cho phép một hành vi (phương thức) có thể được thực hiện theo nhiều cách khác nhau.</li>
+</ul>
+<p>Ví dụ phổ biến:</p>
+<p><strong>Overloading (Nạp chồng phương thức)</strong>:Nhiều phương thức cùng tên nhưng khác tham số.</p>
+<p><strong>Overriding (Ghi đè phương thức)</strong>: Lớp con định nghĩa lại phương thức của lớp cha.</p>
+<h4 id="4-trừu-tượng-abstraction">4. Trừu Tượng (Abstraction)</h4>
+<ul>
+<li>
+<p><strong>Khái niệm</strong>: Chỉ hiển thị những thông tin cần thiết và ẩn đi những chi tiết phức tạp, không liên quan.</p>
+</li>
+<li>
+<p><strong>Thực hiện</strong>: Thông qua Abstract Classes (Lớp Trừu Tượng) và Interfaces (Giao diện).</p>
+</li>
+</ul>
+<h3 id="iii-tóm-tắt-vai-trò">III. Tóm Tắt Vai Trò</h3>
+<table>
+  <thead>
+      <tr>
+          <th style="text-align: left">Trụ cột</th>
+          <th style="text-align: left">Mục đích chính</th>
+          <th style="text-align: left">Cơ chế trong Java</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left"><strong>Đóng Gói</strong></td>
+          <td style="text-align: left">Bảo vệ và kiểm soát dữ liệu.</td>
+          <td style="text-align: left"><code>private</code> variables, <code>public</code> Getter/Setter.</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong>Kế Thừa</strong></td>
+          <td style="text-align: left">Tái sử dụng code, tạo cấu trúc phân cấp.</td>
+          <td style="text-align: left">Từ khóa <code>extends</code>.</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong>Đa Hình</strong></td>
+          <td style="text-align: left">Linh hoạt, cho phép một giao diện nhiều triển khai.</td>
+          <td style="text-align: left">Overloading, Overriding.</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong>Trừu Tượng</strong></td>
+          <td style="text-align: left">Đơn giản hóa sự phức tạp, tập trung vào chức năng.</td>
+          <td style="text-align: left"><code>abstract class</code>, <code>interface</code>.</td>
+      </tr>
+  </tbody>
+</table>
+<h3 id="iv-kết-luận">IV. Kết Luận</h3>
+<p>OOP là trọng tâm của Java. Nắm vững bốn trụ cột này là chìa khóa để viết code chuyên nghiệp, dễ bảo trì.</p>
+<ul class="pa0">
+  
+   <li class="list di">
+     <a href="/HNTDat0805/MyBlog/tags/java/" class="link f5 grow br-pill ba ph3 pv2 mb2 dib black sans-serif no-underline">Java</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/HNTDat0805/MyBlog/tags/oop/" class="link f5 grow br-pill ba ph3 pv2 mb2 dib black sans-serif no-underline">Oop</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/HNTDat0805/MyBlog/tags/h%C6%B0%E1%BB%9Bng-%C4%91%E1%BB%91i-t%C6%B0%E1%BB%A3ng/" class="link f5 grow br-pill ba ph3 pv2 mb2 dib black sans-serif no-underline">Hướng Đối Tượng</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/HNTDat0805/MyBlog/tags/class/" class="link f5 grow br-pill ba ph3 pv2 mb2 dib black sans-serif no-underline">Class</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/HNTDat0805/MyBlog/tags/object/" class="link f5 grow br-pill ba ph3 pv2 mb2 dib black sans-serif no-underline">Object</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/HNTDat0805/MyBlog/tags/k%E1%BA%BF-th%E1%BB%ABa/" class="link f5 grow br-pill ba ph3 pv2 mb2 dib black sans-serif no-underline">Kế Thừa</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/HNTDat0805/MyBlog/tags/%C4%91a-h%C3%ACnh/" class="link f5 grow br-pill ba ph3 pv2 mb2 dib black sans-serif no-underline">Đa Hình</a>
+   </li>
+  
+</ul>
+<div class="mt6 instapaper_ignoref">
+      
+      
+      </div>
+    </div>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+  <div class="bg-light-gray pa3 nested-list-reset nested-copy-line-height nested-links">
+    <p class="f5 b mb3">Related</p>
+    <ul class="pa0 list">
+	   
+	     <li  class="mb2">
+          <a href="/HNTDat0805/MyBlog/posts/bai2_cau-truc-co-ban/">CẤU TRÚC CƠ BẢN</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/HNTDat0805/MyBlog/posts/bai3_bien-kieu-du-lieu/">BIẾN VÀ KIỂU DỮ LIỆU</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/HNTDat0805/MyBlog/posts/bai4_cau-truc-dieu-khien/">CẤU TRÚC ĐIỀU KHIỂN</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/HNTDat0805/MyBlog/posts/bai1_gioi-thieu-java/">GIỚI THIỆU VỀ JAVA</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/HNTDat0805/MyBlog/posts/bai8_lap-trinh-socket/">LẬP TRÌNH SOCKET</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/HNTDat0805/MyBlog/posts/bai9_da-luong/">LẬP TRÌNH ĐA LUỒNG (MULTITHREADING)</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/HNTDat0805/MyBlog/posts/bai5_mang-va-chuoi/">MẢNG VÀ CHUỖI</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/HNTDat0805/MyBlog/posts/bai7_xu-ly-ngoai-le/">XỬ LÝ NGOẠI LỆ</a>
+        </li>
+	    
+    </ul>
+</div>
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white white-70 dn dib-ns pv2 ph3 no-underline" href="https://github.com/HNTDat0805/MyBlog/" >
+    &copy;  Blog Java & JavaScript 2025 
+  </a>
+    <div><div class="ananke-socials"></div>
+</div>
+  </div>
+</footer>
+
+  </body>
+</html>

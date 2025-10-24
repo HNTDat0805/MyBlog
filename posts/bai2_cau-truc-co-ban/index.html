@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>CẤU TRÚC CƠ BẢN | Blog Java &amp; JavaScript</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="Tìm hiểu Class, Object, Main Method, Package và các quy tắc cú pháp cơ bản của Java.">
+    <meta name="generator" content="Hugo 0.150.0">
+    
+    
+    
+      <meta name="robots" content="index, follow">
+    
+    <meta name="author" content="Hồ Nguyễn Tấn Đạt">
+    
+
+    
+<link rel="stylesheet" href="/HNTDat0805/MyBlog/ananke/css/main.min.2438bcafd7af9675c426d1a4afcd16cfff18e4e10f401071e45b5ccd3be40a0d.css" >
+
+
+
+  
+    <link rel="stylesheet" href="/HNTDat0805/MyBlog/css/custom.css">
+  
+
+
+    
+
+
+    
+      
+
+    
+
+    
+
+    
+      <link rel="canonical" href="https://github.com/HNTDat0805/MyBlog/posts/bai2_cau-truc-co-ban/">
+    
+
+    <meta property="og:url" content="https://github.com/HNTDat0805/MyBlog/posts/bai2_cau-truc-co-ban/">
+  <meta property="og:site_name" content="Blog Java & JavaScript">
+  <meta property="og:title" content="CẤU TRÚC CƠ BẢN">
+  <meta property="og:description" content="Tìm hiểu Class, Object, Main Method, Package và các quy tắc cú pháp cơ bản của Java.">
+  <meta property="og:locale" content="vi">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2025-10-23T00:00:00+00:00">
+    <meta property="article:modified_time" content="2025-10-23T00:00:00+00:00">
+    <meta property="article:tag" content="Java">
+    <meta property="article:tag" content="Cấu Trúc">
+    <meta property="article:tag" content="Class">
+    <meta property="article:tag" content="Main">
+    <meta property="article:tag" content="Package">
+
+  <meta itemprop="name" content="CẤU TRÚC CƠ BẢN">
+  <meta itemprop="description" content="Tìm hiểu Class, Object, Main Method, Package và các quy tắc cú pháp cơ bản của Java.">
+  <meta itemprop="datePublished" content="2025-10-23T00:00:00+00:00">
+  <meta itemprop="dateModified" content="2025-10-23T00:00:00+00:00">
+  <meta itemprop="wordCount" content="596">
+  <meta itemprop="keywords" content="Java,Cấu Trúc,Class,Main,Package">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="CẤU TRÚC CƠ BẢN">
+  <meta name="twitter:description" content="Tìm hiểu Class, Object, Main Method, Package và các quy tắc cú pháp cơ bản của Java.">
+
+      
+    
+	
+  </head><body class="ma0 avenir bg-near-white production">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l center items-center justify-between">
+    <a href="/HNTDat0805/MyBlog/" class="f3 fw2 hover-white white-90 dib no-underline">
+      
+        Blog Java &amp; JavaScript
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+        <ul class="pl0 mr3">
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white white-90 no-underline" href="/HNTDat0805/MyBlog/" title="🏠 Trang chủ page">
+              🏠 Trang chủ
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white white-90 no-underline" href="/HNTDat0805/MyBlog/about/" title="👨‍💻 Giới thiệu page">
+              👨‍💻 Giới thiệu
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white white-90 no-underline" href="/HNTDat0805/MyBlog/posts/" title="📰 Blog page">
+              📰 Blog
+            </a>
+          </li>
+          
+        </ul>
+      
+      <div class="ananke-socials"></div>
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  
+  <article class="flex-l mw8 center ph3 flex-wrap justify-between">
+    <header class="mt4 w-100">
+      <aside class="instapaper_ignoref b helvetica tracked ttu">
+          
+        Posts
+      </aside><div id="sharing" class="mt3 ananke-socials"></div>
+<h1 class="f1 athelas mt3 mb1">CẤU TRÚC CƠ BẢN</h1>
+      
+      <p class="tracked"><strong>Hồ Nguyễn Tấn Đạt</strong>
+      </p>
+      
+      
+      
+      <time class="f6 mv4 dib tracked" datetime="2025-10-23T00:00:00Z">23-10-2025</time>
+      
+
+      
+      
+        
+        
+        <span class="f6 mv4 dib tracked"> - 3 minutes read </span>
+        <span class="f6 mv4 dib tracked"> - 596 words </span>
+      
+    </header>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><h3 id="i-khái-niệm-cốt-lõi-lớp-class-và-đối-tượng-object">I. Khái Niệm Cốt Lõi: Lớp (Class) và Đối Tượng (Object)</h3>
+<p>Trong Java, mọi thứ đều được tổ chức bên trong một <strong>Lớp (Class)</strong>.</p>
+<ul>
+<li><strong>Lớp (Class):</strong> Giống như một <strong>bản thiết kế</strong> (Blueprint). Nó định nghĩa các <strong>thuộc tính</strong> (dữ liệu) và <strong>phương thức</strong> (hành vi) mà các đối tượng sẽ có.</li>
+<li><strong>Đối Tượng (Object):</strong> Là một <strong>thể hiện thực tế</strong> được tạo ra từ lớp.</li>
+</ul>
+<h4 id="cú-pháp-khai-báo-lớp">Cú Pháp Khai Báo Lớp:</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#75715e">// Khai báo lớp XeHoi</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">XeHoi</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// Thuộc tính (dữ liệu)</span>
+</span></span><span style="display:flex;"><span>    String mauSac <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Đỏ&#34;</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> tocDo <span style="color:#f92672">=</span> 0;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// Phương thức (hành vi)</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">tangToc</span>() {
+</span></span><span style="display:flex;"><span>        tocDo <span style="color:#f92672">=</span> tocDo <span style="color:#f92672">+</span> 10;
+</span></span><span style="display:flex;"><span>        System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;Tốc độ hiện tại: &#34;</span> <span style="color:#f92672">+</span> tocDo <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34; km/h&#34;</span>);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="ii-phương-thức-chính-the-main-method">II. Phương Thức Chính (The Main Method)</h3>
+<p>Phương thức main là điểm khởi đầu, là nơi JVM bắt đầu thực thi code. Nó phải luôn tuân thủ cú pháp sau:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span>(String<span style="color:#f92672">[]</span> args) {
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Code của chương trình bắt đầu từ đây</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Tạo một Đối tượng từ lớp XeHoi</span>
+</span></span><span style="display:flex;"><span>    XeHoi xeA <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> XeHoi(); <span style="color:#75715e">// Sử dụng từ khóa &#39;new&#39; để tạo đối tượng</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;Xe A ban đầu có màu: &#34;</span> <span style="color:#f92672">+</span> xeA.<span style="color:#a6e22e">mauSac</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Gọi phương thức của đối tượng</span>
+</span></span><span style="display:flex;"><span>    xeA.<span style="color:#a6e22e">tangToc</span>();
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h4 id="giải-thích-chi-tiết-phương-thức-main">Giải Thích Chi Tiết Phương Thức <code>main</code></h4>
+<p>Phương thức <code>public static void main(String[] args)</code> bao gồm các từ khóa quan trọng sau:</p>
+<table>
+  <thead>
+      <tr>
+          <th style="text-align: left">Từ khóa</th>
+          <th style="text-align: left">Ý nghĩa</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left"><strong><code>public</code></strong></td>
+          <td style="text-align: left">Có thể truy cập công khai từ bất cứ đâu.</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong><code>static</code></strong></td>
+          <td style="text-align: left">Thuộc về Lớp (Class), không cần tạo Đối tượng (Object) để gọi.</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong><code>void</code></strong></td>
+          <td style="text-align: left">Phương thức không trả về giá trị nào sau khi thực thi xong.</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong><code>main</code></strong></td>
+          <td style="text-align: left">Tên hàm tiêu chuẩn mà <strong>JVM (Máy ảo Java)</strong> tìm kiếm để bắt đầu chương trình.</td>
+      </tr>
+  </tbody>
+</table>
+<h3 id="iii-quy-tắc-cú-pháp-cơ-bản">III. Quy Tắc Cú Pháp Cơ Bản</h3>
+<p>Tuân thủ các quy tắc này là bắt buộc để code Java chạy được:</p>
+<ul>
+<li><strong>Phân Biệt Chữ Hoa/Thường (Case Sensitive):</strong> Tên biến, tên lớp phân biệt rõ ràng (ví dụ: <code>Ten</code> và <code>ten</code> là hai thứ khác nhau).</li>
+<li><strong>Dấu Chấm Phẩy (<code>;</code>):</strong> Mọi câu lệnh kết thúc bằng dấu chấm phẩy.</li>
+<li><strong>Khối Lệnh (<code>{}</code>):</strong> Dùng để nhóm các câu lệnh lại với nhau, định nghĩa thân của Class, Phương thức hoặc cấu trúc điều khiển.</li>
+</ul>
+<h4 id="quy-tắc-đặt-tên-conventions">Quy Tắc Đặt Tên (Conventions)</h4>
+<table>
+  <thead>
+      <tr>
+          <th style="text-align: left">Thành phần</th>
+          <th style="text-align: left">Quy ước</th>
+          <th style="text-align: left">Ví dụ</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left"><strong>Lớp (Class)</strong></td>
+          <td style="text-align: left"><strong>PascalCase</strong></td>
+          <td style="text-align: left"><code>TenLopMoi</code></td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong>Biến và Phương thức</strong></td>
+          <td style="text-align: left"><strong>camelCase</strong></td>
+          <td style="text-align: left"><code>tenBienCuaToi</code>, <code>tinhTong()</code></td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong>Hằng số (Constant)</strong></td>
+          <td style="text-align: left"><strong>VIẾT_HOA_CÓ_DẤU_GẠCH_DƯỚI</strong></td>
+          <td style="text-align: left"><code>MAX_VALUE</code></td>
+      </tr>
+  </tbody>
+</table>
+<h3 id="iv-tổ-chức-code-gói-package-và-import">IV. Tổ Chức Code: Gói (Package) và Import</h3>
+<p>Khi dự án lớn dần, ta cần cơ chế tổ chức code.</p>
+<h4 id="1-gói-package">1. Gói (Package)</h4>
+<p>Package là cơ chế nhóm các lớp có liên quan với nhau vào một thư mục logic, giúp quản lý và tránh xung đột tên lớp.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#75715e">// Dòng đầu tiên trong file phải là khai báo package</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">package</span> com.tencongty.tenproject.models;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">NguoiDung</span> {
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Nội dung lớp NguoiDung</span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h4 id="2-lệnh-import">2. Lệnh Import</h4>
+<p>Sử dụng import để cho phép bạn sử dụng một lớp từ một Package khác.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#75715e">// Import lớp Scanner từ package java.util</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> java.util.Scanner;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">ViDuImport</span> {
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span>(String<span style="color:#f92672">[]</span> args) {
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Có thể sử dụng Scanner sau khi import</span>
+</span></span><span style="display:flex;"><span>Scanner scanner <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Scanner(System.<span style="color:#a6e22e">in</span>);
+</span></span><span style="display:flex;"><span>System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;Nhập tên của bạn:&#34;</span>);
+</span></span><span style="display:flex;"><span>String ten <span style="color:#f92672">=</span> scanner.<span style="color:#a6e22e">nextLine</span>();
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="v-chú-thích-comments---code-dễ-đọc">V. Chú Thích (Comments) - Code Dễ Đọc</h3>
+<p>Chú thích là những dòng code mà JVM bỏ qua, nhưng chúng lại cực kỳ quan trọng đối với khả năng đọc hiểu của code.</p>
+<table>
+  <thead>
+      <tr>
+          <th style="text-align: left">Kiểu Chú Thích</th>
+          <th style="text-align: left">Cú Pháp</th>
+          <th style="text-align: left">Ứng dụng</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left"><strong>Dòng đơn</strong></td>
+          <td style="text-align: left"><code>//</code></td>
+          <td style="text-align: left">Giải thích nhanh một dòng code.</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong>Khối</strong></td>
+          <td style="text-align: left"><code>/* ... */</code></td>
+          <td style="text-align: left">Chú thích trên nhiều dòng.</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong>Javadoc</strong></td>
+          <td style="text-align: left"><code>/** ... */</code></td>
+          <td style="text-align: left">Tạo tài liệu tự động (Documentation).</td>
+      </tr>
+  </tbody>
+</table>
+<ul class="pa0">
+  
+   <li class="list di">
+     <a href="/HNTDat0805/MyBlog/tags/java/" class="link f5 grow br-pill ba ph3 pv2 mb2 dib black sans-serif no-underline">Java</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/HNTDat0805/MyBlog/tags/c%E1%BA%A5u-tr%C3%BAc/" class="link f5 grow br-pill ba ph3 pv2 mb2 dib black sans-serif no-underline">Cấu Trúc</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/HNTDat0805/MyBlog/tags/class/" class="link f5 grow br-pill ba ph3 pv2 mb2 dib black sans-serif no-underline">Class</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/HNTDat0805/MyBlog/tags/main/" class="link f5 grow br-pill ba ph3 pv2 mb2 dib black sans-serif no-underline">Main</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/HNTDat0805/MyBlog/tags/package/" class="link f5 grow br-pill ba ph3 pv2 mb2 dib black sans-serif no-underline">Package</a>
+   </li>
+  
+</ul>
+<div class="mt6 instapaper_ignoref">
+      
+      
+      </div>
+    </div>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+  <div class="bg-light-gray pa3 nested-list-reset nested-copy-line-height nested-links">
+    <p class="f5 b mb3">Related</p>
+    <ul class="pa0 list">
+	   
+	     <li  class="mb2">
+          <a href="/HNTDat0805/MyBlog/posts/bai1_gioi-thieu-java/">GIỚI THIỆU VỀ JAVA</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/HNTDat0805/MyBlog/posts/bai6_lap-trinh-huong-doi-tuong/">LẬP TRÌNH HƯỚNG ĐỐI TƯỢNG - OOP</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/HNTDat0805/MyBlog/posts/bai3_bien-kieu-du-lieu/">BIẾN VÀ KIỂU DỮ LIỆU</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/HNTDat0805/MyBlog/posts/bai4_cau-truc-dieu-khien/">CẤU TRÚC ĐIỀU KHIỂN</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/HNTDat0805/MyBlog/posts/bai8_lap-trinh-socket/">LẬP TRÌNH SOCKET</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/HNTDat0805/MyBlog/posts/bai9_da-luong/">LẬP TRÌNH ĐA LUỒNG (MULTITHREADING)</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/HNTDat0805/MyBlog/posts/bai5_mang-va-chuoi/">MẢNG VÀ CHUỖI</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/HNTDat0805/MyBlog/posts/bai7_xu-ly-ngoai-le/">XỬ LÝ NGOẠI LỆ</a>
+        </li>
+	    
+    </ul>
+</div>
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white white-70 dn dib-ns pv2 ph3 no-underline" href="https://github.com/HNTDat0805/MyBlog/" >
+    &copy;  Blog Java & JavaScript 2025 
+  </a>
+    <div><div class="ananke-socials"></div>
+</div>
+  </div>
+</footer>
+
+  </body>
+</html>

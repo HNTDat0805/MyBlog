@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>If on Blog Java &amp; JavaScript</title>
+    <link>https://github.com/HNTDat0805/MyBlog/tags/if/</link>
+    <description>Recent content in If on Blog Java &amp; JavaScript</description>
+    <generator>Hugo</generator>
+    <language>vi</language>
+    <lastBuildDate>Thu, 23 Oct 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://github.com/HNTDat0805/MyBlog/tags/if/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CẤU TRÚC ĐIỀU KHIỂN</title>
+      <link>https://github.com/HNTDat0805/MyBlog/posts/bai4_cau-truc-dieu-khien/</link>
+      <pubDate>Thu, 23 Oct 2025 00:00:00 +0000</pubDate>
+      <guid>https://github.com/HNTDat0805/MyBlog/posts/bai4_cau-truc-dieu-khien/</guid>
+      <description>&lt;h3 id=&#34;i-mở-đầu-đưa-ra-quyết-định&#34;&gt;I. Mở Đầu: Đưa Ra Quyết Định&lt;/h3&gt;&#xA;&lt;p&gt;&lt;strong&gt;Cấu trúc Điều khiển&lt;/strong&gt; giúp kiểm soát luồng thực thi của chương trình, cho phép ra quyết định (chọn nhánh thực thi) và lặp lại (thực hiện một khối lệnh nhiều lần) tùy theo điều kiện cụ thể.&lt;/p&gt;&#xA;&lt;h3 id=&#34;ii-câu-lệnh-điều-kiện-conditional-statements&#34;&gt;II. Câu Lệnh Điều Kiện (Conditional Statements)&lt;/h3&gt;&#xA;&lt;h4 id=&#34;1-if-else-if-và-else&#34;&gt;1. &lt;code&gt;if&lt;/code&gt;, &lt;code&gt;else if&lt;/code&gt;, và &lt;code&gt;else&lt;/code&gt;&lt;/h4&gt;&#xA;&lt;p&gt;Dùng để thực thi một khối code nếu một điều kiện cụ thể là &lt;code&gt;true&lt;/code&gt;.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

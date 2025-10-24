@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Socket on Blog Java &amp; JavaScript</title>
+    <link>https://github.com/HNTDat0805/MyBlog/tags/socket/</link>
+    <description>Recent content in Socket on Blog Java &amp; JavaScript</description>
+    <generator>Hugo</generator>
+    <language>vi</language>
+    <lastBuildDate>Thu, 23 Oct 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://github.com/HNTDat0805/MyBlog/tags/socket/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>LẬP TRÌNH SOCKET</title>
+      <link>https://github.com/HNTDat0805/MyBlog/posts/bai8_lap-trinh-socket/</link>
+      <pubDate>Thu, 23 Oct 2025 00:00:00 +0000</pubDate>
+      <guid>https://github.com/HNTDat0805/MyBlog/posts/bai8_lap-trinh-socket/</guid>
+      <description>&lt;h3 id=&#34;i-giới-thiệu-lập-trình-mạng-và-socket&#34;&gt;I. Giới Thiệu Lập Trình Mạng và Socket&lt;/h3&gt;&#xA;&lt;p&gt;Java hỗ trợ mạnh mẽ lập trình mạng thông qua &lt;strong&gt;Socket API&lt;/strong&gt;.&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Socket:&lt;/strong&gt; Là điểm cuối (endpoint) của một kết nối giao tiếp hai chiều (two-way communication link) giữa hai chương trình chạy trên mạng.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;TCP (Transmission Control Protocol):&lt;/strong&gt; Là giao thức phổ biến nhất được sử dụng bởi Java Socket, đảm bảo dữ liệu được truyền đi &lt;strong&gt;đáng tin cậy&lt;/strong&gt; và &lt;strong&gt;theo đúng thứ tự&lt;/strong&gt; (Connection-Oriented).&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;ii-phía-máy-chủ-server&#34;&gt;II. Phía Máy Chủ (Server)&lt;/h3&gt;&#xA;&lt;p&gt;Máy chủ phải chờ và lắng nghe các yêu cầu kết nối từ phía máy khách.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

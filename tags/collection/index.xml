@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Collection on Blog Java &amp; JavaScript</title>
+    <link>https://github.com/HNTDat0805/MyBlog/tags/collection/</link>
+    <description>Recent content in Collection on Blog Java &amp; JavaScript</description>
+    <generator>Hugo</generator>
+    <language>vi</language>
+    <lastBuildDate>Thu, 23 Oct 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://github.com/HNTDat0805/MyBlog/tags/collection/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>MẢNG VÀ CHUỖI</title>
+      <link>https://github.com/HNTDat0805/MyBlog/posts/bai5_mang-va-chuoi/</link>
+      <pubDate>Thu, 23 Oct 2025 00:00:00 +0000</pubDate>
+      <guid>https://github.com/HNTDat0805/MyBlog/posts/bai5_mang-va-chuoi/</guid>
+      <description>&lt;h3 id=&#34;i-mảng-arrays&#34;&gt;I. Mảng (Arrays)&lt;/h3&gt;&#xA;&lt;p&gt;&lt;strong&gt;Mảng&lt;/strong&gt; là một tập hợp các biến có cùng kiểu dữ liệu, được lưu trữ liên tiếp nhau trong bộ nhớ. Mảng có &lt;strong&gt;kích thước cố định&lt;/strong&gt; và các phần tử được truy cập thông qua &lt;strong&gt;chỉ số (index)&lt;/strong&gt;, bắt đầu từ 0.&lt;/p&gt;&#xA;&lt;h4 id=&#34;1-khai-báo-và-khởi-tạo-mảng&#34;&gt;1. Khai Báo và Khởi Tạo Mảng&lt;/h4&gt;&#xA;&lt;p&gt;Có hai cách chính để tạo mảng:&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;// Cách 1: Khởi tạo với kích thước cố định (Kích thước: 5)&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;// Các phần tử sẽ được gán giá trị mặc định (0 cho int, null cho String,...)&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;[]&lt;/span&gt; soNguyen &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;new&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;5&lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt;;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;// Cách 2: Khởi tạo trực tiếp với các giá trị (Kích thước: 3)&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;String&lt;span style=&#34;color:#f92672&#34;&gt;[]&lt;/span&gt; tenTraiCay &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; {&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Táo&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Cam&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Xoài&amp;#34;&lt;/span&gt;};&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;2-truy-cập-và-gán-giá-trị&#34;&gt;2. Truy Cập và Gán Giá Trị&lt;/h4&gt;&#xA;&lt;p&gt;Phần tử trong mảng được truy cập thông qua chỉ số (index).&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

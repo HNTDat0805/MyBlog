@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>LẬP TRÌNH SOCKET | Blog Java &amp; JavaScript</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="Hướng dẫn lập trình mạng cơ bản với Socket, bao gồm ServerSocket, Socket Client và giao thức TCP.">
+    <meta name="generator" content="Hugo 0.150.0">
+    
+    
+    
+      <meta name="robots" content="index, follow">
+    
+    <meta name="author" content="Hồ Nguyễn Tấn Đạt">
+    
+
+    
+<link rel="stylesheet" href="/HNTDat0805/MyBlog/ananke/css/main.min.2438bcafd7af9675c426d1a4afcd16cfff18e4e10f401071e45b5ccd3be40a0d.css" >
+
+
+
+  
+    <link rel="stylesheet" href="/HNTDat0805/MyBlog/css/custom.css">
+  
+
+
+    
+
+
+    
+      
+
+    
+
+    
+
+    
+      <link rel="canonical" href="https://github.com/HNTDat0805/MyBlog/posts/bai8_lap-trinh-socket/">
+    
+
+    <meta property="og:url" content="https://github.com/HNTDat0805/MyBlog/posts/bai8_lap-trinh-socket/">
+  <meta property="og:site_name" content="Blog Java & JavaScript">
+  <meta property="og:title" content="LẬP TRÌNH SOCKET">
+  <meta property="og:description" content="Hướng dẫn lập trình mạng cơ bản với Socket, bao gồm ServerSocket, Socket Client và giao thức TCP.">
+  <meta property="og:locale" content="vi">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2025-10-23T00:00:00+00:00">
+    <meta property="article:modified_time" content="2025-10-23T00:00:00+00:00">
+    <meta property="article:tag" content="Java">
+    <meta property="article:tag" content="Socket">
+    <meta property="article:tag" content="Networking">
+    <meta property="article:tag" content="Tcp">
+    <meta property="article:tag" content="Server">
+    <meta property="article:tag" content="Client">
+
+  <meta itemprop="name" content="LẬP TRÌNH SOCKET">
+  <meta itemprop="description" content="Hướng dẫn lập trình mạng cơ bản với Socket, bao gồm ServerSocket, Socket Client và giao thức TCP.">
+  <meta itemprop="datePublished" content="2025-10-23T00:00:00+00:00">
+  <meta itemprop="dateModified" content="2025-10-23T00:00:00+00:00">
+  <meta itemprop="wordCount" content="489">
+  <meta itemprop="keywords" content="Java,Socket,Networking,Tcp,Server,Client">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="LẬP TRÌNH SOCKET">
+  <meta name="twitter:description" content="Hướng dẫn lập trình mạng cơ bản với Socket, bao gồm ServerSocket, Socket Client và giao thức TCP.">
+
+      
+    
+	
+  </head><body class="ma0 avenir bg-near-white production">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l center items-center justify-between">
+    <a href="/HNTDat0805/MyBlog/" class="f3 fw2 hover-white white-90 dib no-underline">
+      
+        Blog Java &amp; JavaScript
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+        <ul class="pl0 mr3">
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white white-90 no-underline" href="/HNTDat0805/MyBlog/" title="🏠 Trang chủ page">
+              🏠 Trang chủ
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white white-90 no-underline" href="/HNTDat0805/MyBlog/about/" title="👨‍💻 Giới thiệu page">
+              👨‍💻 Giới thiệu
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white white-90 no-underline" href="/HNTDat0805/MyBlog/posts/" title="📰 Blog page">
+              📰 Blog
+            </a>
+          </li>
+          
+        </ul>
+      
+      <div class="ananke-socials"></div>
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  
+  <article class="flex-l mw8 center ph3 flex-wrap justify-between">
+    <header class="mt4 w-100">
+      <aside class="instapaper_ignoref b helvetica tracked ttu">
+          
+        Posts
+      </aside><div id="sharing" class="mt3 ananke-socials"></div>
+<h1 class="f1 athelas mt3 mb1">LẬP TRÌNH SOCKET</h1>
+      
+      <p class="tracked"><strong>Hồ Nguyễn Tấn Đạt</strong>
+      </p>
+      
+      
+      
+      <time class="f6 mv4 dib tracked" datetime="2025-10-23T00:00:00Z">23-10-2025</time>
+      
+
+      
+      
+        
+        
+        <span class="f6 mv4 dib tracked"> - 3 minutes read </span>
+        <span class="f6 mv4 dib tracked"> - 489 words </span>
+      
+    </header>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><h3 id="i-giới-thiệu-lập-trình-mạng-và-socket">I. Giới Thiệu Lập Trình Mạng và Socket</h3>
+<p>Java hỗ trợ mạnh mẽ lập trình mạng thông qua <strong>Socket API</strong>.</p>
+<ul>
+<li><strong>Socket:</strong> Là điểm cuối (endpoint) của một kết nối giao tiếp hai chiều (two-way communication link) giữa hai chương trình chạy trên mạng.</li>
+<li><strong>TCP (Transmission Control Protocol):</strong> Là giao thức phổ biến nhất được sử dụng bởi Java Socket, đảm bảo dữ liệu được truyền đi <strong>đáng tin cậy</strong> và <strong>theo đúng thứ tự</strong> (Connection-Oriented).</li>
+</ul>
+<h3 id="ii-phía-máy-chủ-server">II. Phía Máy Chủ (Server)</h3>
+<p>Máy chủ phải chờ và lắng nghe các yêu cầu kết nối từ phía máy khách.</p>
+<h4 id="1-lớp-serversocket">1. Lớp <code>ServerSocket</code></h4>
+<p>Lớp này dùng để tạo một Server Socket. Nó lắng nghe các yêu cầu kết nối từ Client trên một <strong>cổng (Port)</strong> cụ thể.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#f92672">import</span> java.net.ServerSocket;
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> java.net.Socket;
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> java.io.IOException;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">ServerCoBan</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span>(String<span style="color:#f92672">[]</span> args) {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">int</span> port <span style="color:#f92672">=</span> 6666; <span style="color:#75715e">// Cổng lắng nghe</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">try</span> (ServerSocket serverSocket <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ServerSocket(port)) {
+</span></span><span style="display:flex;"><span>            System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;Server đang lắng nghe trên cổng &#34;</span> <span style="color:#f92672">+</span> port);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e">// serverSocket.accept() là lệnh chặn, chờ Client kết nối</span>
+</span></span><span style="display:flex;"><span>            Socket clientSocket <span style="color:#f92672">=</span> serverSocket.<span style="color:#a6e22e">accept</span>();
+</span></span><span style="display:flex;"><span>            System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;Client đã kết nối từ: &#34;</span> <span style="color:#f92672">+</span> clientSocket.<span style="color:#a6e22e">getInetAddress</span>());
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e">// Sau khi kết nối, Server và Client trao đổi dữ liệu qua clientSocket</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e">// ... (Code xử lý Input/Output)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        } <span style="color:#66d9ef">catch</span> (IOException e) {
+</span></span><span style="display:flex;"><span>            e.<span style="color:#a6e22e">printStackTrace</span>();
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h4 id="2-xử-lý-dữ-liệu-trên-server">2. Xử lý Dữ liệu trên Server</h4>
+<p>Để gửi và nhận dữ liệu, chúng ta sử dụng các luồng I/O (Input/Output Streams) tương tự như làm việc với tệp.</p>
+<table>
+  <thead>
+      <tr>
+          <th style="text-align: left">Lớp</th>
+          <th style="text-align: left">Mục đích</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left"><strong><code>InputStream</code></strong></td>
+          <td style="text-align: left">Nhận dữ liệu từ Client.</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong><code>OutputStream</code></strong></td>
+          <td style="text-align: left">Gửi dữ liệu đến Client.</td>
+      </tr>
+  </tbody>
+</table>
+<h3 id="iii-phía-máy-khách-client">III. Phía Máy Khách (Client)</h3>
+<p>Máy khách chủ động tạo kết nối tới máy chủ.</p>
+<h4 id="1-lớp-socket">1. Lớp Socket</h4>
+<p>Lớp này được dùng để tạo một Socket Client. Nó cần địa chỉ IP hoặc tên máy chủ, và số cổng của máy chủ.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#f92672">import</span> java.net.Socket;
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> java.io.IOException;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">ClientCoBan</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span>(String<span style="color:#f92672">[]</span> args) {
+</span></span><span style="display:flex;"><span>        String serverAddress <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;localhost&#34;</span>; <span style="color:#75715e">// Địa chỉ máy chủ (có thể là IP)</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">int</span> port <span style="color:#f92672">=</span> 6666;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">try</span> (Socket socket <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Socket(serverAddress, port)) {
+</span></span><span style="display:flex;"><span>            System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;Đã kết nối tới Server: &#34;</span> <span style="color:#f92672">+</span> serverAddress <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;:&#34;</span> <span style="color:#f92672">+</span> port);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e">// Gửi dữ liệu đến Server (OutputStream)</span>
+</span></span><span style="display:flex;"><span>            socket.<span style="color:#a6e22e">getOutputStream</span>().<span style="color:#a6e22e">write</span>(<span style="color:#e6db74">&#34;Xin chào Server!&#34;</span>.<span style="color:#a6e22e">getBytes</span>());
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e">// Nhận dữ liệu từ Server (InputStream)</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e">// ... (Code đọc dữ liệu)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        } <span style="color:#66d9ef">catch</span> (IOException e) {
+</span></span><span style="display:flex;"><span>            System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;Không thể kết nối tới Server.&#34;</span>);
+</span></span><span style="display:flex;"><span>            e.<span style="color:#a6e22e">printStackTrace</span>();
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="iv-quy-trình-giao-tiếp-tcp-cơ-bản">IV. Quy Trình Giao Tiếp TCP Cơ Bản</h3>
+<p>Giao tiếp bằng Socket thường tuân theo các bước sau:</p>
+<table>
+  <thead>
+      <tr>
+          <th style="text-align: left">Bước</th>
+          <th style="text-align: left">Server</th>
+          <th style="text-align: left">Client</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left"><strong>1. Khởi tạo</strong></td>
+          <td style="text-align: left">Tạo <code>ServerSocket</code> và lắng nghe Port.</td>
+          <td style="text-align: left">Tạo <code>Socket</code> với IP và Port của Server.</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong>2. Kết nối</strong></td>
+          <td style="text-align: left">Dùng <code>accept()</code> để chấp nhận kết nối.</td>
+          <td style="text-align: left">Kết nối được thiết lập.</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong>3. Trao đổi Dữ liệu</strong></td>
+          <td style="text-align: left">Lấy <code>InputStream</code> và <code>OutputStream</code> từ <code>clientSocket</code>.</td>
+          <td style="text-align: left">Lấy <code>InputStream</code> và <code>OutputStream</code> từ <code>socket</code>.</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong>4. Đóng kết nối</strong></td>
+          <td style="text-align: left">Đóng <code>clientSocket</code> và <code>serverSocket</code>.</td>
+          <td style="text-align: left">Đóng <code>socket</code>.</td>
+      </tr>
+  </tbody>
+</table>
+<h3 id="v-kết-luận">V. Kết Luận</h3>
+<p>Lập trình Socket là bước đầu tiên và cơ bản nhất để xây dựng các ứng dụng client-server.</p>
+<ul class="pa0">
+  
+   <li class="list di">
+     <a href="/HNTDat0805/MyBlog/tags/java/" class="link f5 grow br-pill ba ph3 pv2 mb2 dib black sans-serif no-underline">Java</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/HNTDat0805/MyBlog/tags/socket/" class="link f5 grow br-pill ba ph3 pv2 mb2 dib black sans-serif no-underline">Socket</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/HNTDat0805/MyBlog/tags/networking/" class="link f5 grow br-pill ba ph3 pv2 mb2 dib black sans-serif no-underline">Networking</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/HNTDat0805/MyBlog/tags/tcp/" class="link f5 grow br-pill ba ph3 pv2 mb2 dib black sans-serif no-underline">Tcp</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/HNTDat0805/MyBlog/tags/server/" class="link f5 grow br-pill ba ph3 pv2 mb2 dib black sans-serif no-underline">Server</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/HNTDat0805/MyBlog/tags/client/" class="link f5 grow br-pill ba ph3 pv2 mb2 dib black sans-serif no-underline">Client</a>
+   </li>
+  
+</ul>
+<div class="mt6 instapaper_ignoref">
+      
+      
+      </div>
+    </div>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+  <div class="bg-light-gray pa3 nested-list-reset nested-copy-line-height nested-links">
+    <p class="f5 b mb3">Related</p>
+    <ul class="pa0 list">
+	   
+	     <li  class="mb2">
+          <a href="/HNTDat0805/MyBlog/posts/bai3_bien-kieu-du-lieu/">BIẾN VÀ KIỂU DỮ LIỆU</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/HNTDat0805/MyBlog/posts/bai2_cau-truc-co-ban/">CẤU TRÚC CƠ BẢN</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/HNTDat0805/MyBlog/posts/bai4_cau-truc-dieu-khien/">CẤU TRÚC ĐIỀU KHIỂN</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/HNTDat0805/MyBlog/posts/bai1_gioi-thieu-java/">GIỚI THIỆU VỀ JAVA</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/HNTDat0805/MyBlog/posts/bai6_lap-trinh-huong-doi-tuong/">LẬP TRÌNH HƯỚNG ĐỐI TƯỢNG - OOP</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/HNTDat0805/MyBlog/posts/bai9_da-luong/">LẬP TRÌNH ĐA LUỒNG (MULTITHREADING)</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/HNTDat0805/MyBlog/posts/bai5_mang-va-chuoi/">MẢNG VÀ CHUỖI</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/HNTDat0805/MyBlog/posts/bai7_xu-ly-ngoai-le/">XỬ LÝ NGOẠI LỆ</a>
+        </li>
+	    
+    </ul>
+</div>
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white white-70 dn dib-ns pv2 ph3 no-underline" href="https://github.com/HNTDat0805/MyBlog/" >
+    &copy;  Blog Java & JavaScript 2025 
+  </a>
+    <div><div class="ananke-socials"></div>
+</div>
+  </div>
+</footer>
+
+  </body>
+</html>
