@@ -1,19 +1,293 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Primitive on Blog Java &amp; JavaScript</title>
+    <title>Blog Java &amp; JavaScript – Primitive</title>
     <link>https://hntdat0805.github.io/MyBlog/tags/primitive/</link>
     <description>Recent content in Primitive on Blog Java &amp; JavaScript</description>
-    <generator>Hugo</generator>
+    <generator>Hugo -- gohugo.io</generator>
     <language>vi</language>
     <lastBuildDate>Thu, 23 Oct 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://hntdat0805.github.io/MyBlog/tags/primitive/index.xml" rel="self" type="application/rss+xml" />
+    
+	  <atom:link href="https://hntdat0805.github.io/MyBlog/tags/primitive/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
     <item>
       <title>BIẾN VÀ KIỂU DỮ LIỆU</title>
       <link>https://hntdat0805.github.io/MyBlog/posts/bai3_bien-kieu-du-lieu/</link>
       <pubDate>Thu, 23 Oct 2025 00:00:00 +0000</pubDate>
+      
       <guid>https://hntdat0805.github.io/MyBlog/posts/bai3_bien-kieu-du-lieu/</guid>
-      <description>&lt;h3 id=&#34;i-biến-variables-là-gì&#34;&gt;I. Biến (Variables) Là Gì?&lt;/h3&gt;&#xA;&lt;p&gt;&lt;strong&gt;Biến&lt;/strong&gt; là một vùng nhớ được đặt tên trong bộ nhớ máy tính, dùng để lưu trữ dữ liệu.&lt;/p&gt;&#xA;&lt;h4 id=&#34;cú-pháp-khai-báo-biến&#34;&gt;Cú Pháp Khai Báo Biến&lt;/h4&gt;&#xA;&lt;p&gt;Cú pháp cơ bản bao gồm &lt;strong&gt;Kiểu Dữ Liệu&lt;/strong&gt; và &lt;strong&gt;Tên Biến&lt;/strong&gt;:&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;// Cú pháp: [Kiểu Dữ Liệu] [Tên Biến];&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; soLuong;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;// Khai báo và gán giá trị ban đầu (Initialization)&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;String tenHocSinh &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Nguyễn Văn A&amp;#34;&lt;/span&gt;;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;ii-kiểu-dữ-liệu-nguyên-thủy-primitive-data-types&#34;&gt;II. Kiểu Dữ Liệu Nguyên Thủy (Primitive Data Types)&lt;/h3&gt;&#xA;&lt;p&gt;Java có 8 kiểu dữ liệu nguyên thủy cơ bản, chúng được dùng để lưu trữ các giá trị đơn lẻ và có kích thước cố định trong bộ nhớ.&lt;/p&gt;</description>
+      <description>
+        
+        
+        &lt;h3&gt;I. Biến (Variables) Là Gì?&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;i-biến-variables-là-gì&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#i-bi%e1%ba%bfn-variables-l%c3%a0-g%c3%ac&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;Biến&lt;/strong&gt; là một vùng nhớ được đặt tên trong bộ nhớ máy tính, dùng để lưu trữ dữ liệu.&lt;/p&gt;
+&lt;h4&gt;Cú Pháp Khai Báo Biến&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;cú-pháp-khai-báo-biến&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#c%c3%ba-ph%c3%a1p-khai-b%c3%a1o-bi%e1%ba%bfn&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;Cú pháp cơ bản bao gồm &lt;strong&gt;Kiểu Dữ Liệu&lt;/strong&gt; và &lt;strong&gt;Tên Biến&lt;/strong&gt;:&lt;/p&gt;
+&lt;div class=&#34;hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code&#34;&gt;
+
+&lt;div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;// Cú pháp: [Kiểu Dữ Liệu] [Tên Biến];&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; soLuong;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;// Khai báo và gán giá trị ban đầu (Initialization)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;String tenHocSinh &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Nguyễn Văn A&amp;#34;&lt;/span&gt;;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0&#34;&gt;
+  &lt;button
+    class=&#34;hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50&#34;
+    title=&#34;Copy code&#34;
+  &gt;
+    &lt;div class=&#34;hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4&#34;&gt;&lt;/div&gt;
+  &lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;h3&gt;II. Kiểu Dữ Liệu Nguyên Thủy (Primitive Data Types)&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;ii-kiểu-dữ-liệu-nguyên-thủy-primitive-data-types&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#ii-ki%e1%bb%83u-d%e1%bb%af-li%e1%bb%87u-nguy%c3%aan-th%e1%bb%a7y-primitive-data-types&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Java có 8 kiểu dữ liệu nguyên thủy cơ bản, chúng được dùng để lưu trữ các giá trị đơn lẻ và có kích thước cố định trong bộ nhớ.&lt;/p&gt;
+&lt;h4&gt;1. Các Kiểu Số Nguyên (Integers)&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;1-các-kiểu-số-nguyên-integers&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#1-c%c3%a1c-ki%e1%bb%83u-s%e1%bb%91-nguy%c3%aan-integers&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;Các kiểu này dùng để lưu trữ số nguyên (không có phần thập phân).&lt;/p&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;Kiểu dữ liệu&lt;/th&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;Kích thước&lt;/th&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;Phạm vi giá trị&lt;/th&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;Ứng dụng phổ biến&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;strong&gt;&lt;code&gt;byte&lt;/code&gt;&lt;/strong&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;1 byte&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;-128 đến 127&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;Tiết kiệm bộ nhớ trong mảng lớn.&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;strong&gt;&lt;code&gt;short&lt;/code&gt;&lt;/strong&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;2 bytes&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;-32,768 đến 32,767&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;Ít dùng hơn &lt;code&gt;int&lt;/code&gt;.&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;strong&gt;&lt;code&gt;int&lt;/code&gt;&lt;/strong&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;4 bytes&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;Khoảng +/- 2 tỷ&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;Kiểu mặc định và phổ biến nhất.&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;strong&gt;&lt;code&gt;long&lt;/code&gt;&lt;/strong&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;8 bytes&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;Rất lớn (+/- 9 quintillion)&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;Lưu trữ số lớn (như ID, timestamp).&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;Lưu ý: Khi gán giá trị cho long, nên thêm chữ L hoặc l ở cuối.&lt;/p&gt;
+&lt;div class=&#34;hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code&#34;&gt;
+
+&lt;div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; diemSo &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; 100;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;long&lt;/span&gt; danSoTheGioi &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; 8000000000L;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0&#34;&gt;
+  &lt;button
+    class=&#34;hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50&#34;
+    title=&#34;Copy code&#34;
+  &gt;
+    &lt;div class=&#34;hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4&#34;&gt;&lt;/div&gt;
+  &lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;h4&gt;2. Các Kiểu Số Thực (Floating-Point Numbers)&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;2-các-kiểu-số-thực-floating-point-numbers&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#2-c%c3%a1c-ki%e1%bb%83u-s%e1%bb%91-th%e1%bb%b1c-floating-point-numbers&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;Các kiểu này dùng để lưu trữ số có phần thập phân.&lt;/p&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;Kiểu dữ liệu&lt;/th&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;Kích thước&lt;/th&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;Độ chính xác&lt;/th&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;Ứng dụng phổ biến&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;strong&gt;&lt;code&gt;float&lt;/code&gt;&lt;/strong&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;4 bytes&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;Đơn (6-7 chữ số)&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;Tiết kiệm bộ nhớ.&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;strong&gt;&lt;code&gt;double&lt;/code&gt;&lt;/strong&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;8 bytes&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;Kép (15 chữ số)&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;Kiểu mặc định và chính xác nhất.&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;Lưu ý: Khi gán giá trị cho float, phải thêm chữ F hoặc f ở cuối.&lt;/p&gt;
+&lt;div class=&#34;hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code&#34;&gt;
+
+&lt;div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;double&lt;/span&gt; PI &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; 3.&lt;span style=&#34;color:#a6e22e&#34;&gt;1415926535&lt;/span&gt;; &lt;span style=&#34;color:#75715e&#34;&gt;// Mặc định là double&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;float&lt;/span&gt; tyGia &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; 24500.&lt;span style=&#34;color:#a6e22e&#34;&gt;5f&lt;/span&gt;; &lt;span style=&#34;color:#f92672&#34;&gt;//&lt;/span&gt; Bắt buộc phải có &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;f&amp;#39;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0&#34;&gt;
+  &lt;button
+    class=&#34;hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50&#34;
+    title=&#34;Copy code&#34;
+  &gt;
+    &lt;div class=&#34;hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4&#34;&gt;&lt;/div&gt;
+  &lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;h4&gt;3. Kiểu Ký Tự (Character)&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;3-kiểu-ký-tự-character&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#3-ki%e1%bb%83u-k%c3%bd-t%e1%bb%b1-character&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;Kiểu char dùng để lưu trữ một ký tự đơn, được đặt trong dấu nháy đơn (&amp;rsquo; &amp;lsquo;).&lt;/p&gt;
+&lt;div class=&#34;hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code&#34;&gt;
+
+&lt;div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;char&lt;/span&gt; diemA &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;A&amp;#39;&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;char&lt;/span&gt; kyTuDacBiet &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;$&amp;#39;&lt;/span&gt;;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0&#34;&gt;
+  &lt;button
+    class=&#34;hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50&#34;
+    title=&#34;Copy code&#34;
+  &gt;
+    &lt;div class=&#34;hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4&#34;&gt;&lt;/div&gt;
+  &lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;h4&gt;4. Kiểu Logic (Boolean)&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;4-kiểu-logic-boolean&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#4-ki%e1%bb%83u-logic-boolean&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;Kiểu boolean chỉ có hai giá trị: true hoặc false, dùng cho logic điều kiện.&lt;/p&gt;
+&lt;div class=&#34;hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code&#34;&gt;
+
+&lt;div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;boolean&lt;/span&gt; laSinhVien &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;true&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;boolean&lt;/span&gt; coLoi &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;false&lt;/span&gt;;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0&#34;&gt;
+  &lt;button
+    class=&#34;hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50&#34;
+    title=&#34;Copy code&#34;
+  &gt;
+    &lt;div class=&#34;hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4&#34;&gt;&lt;/div&gt;
+  &lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;h3&gt;III. Kiểu Dữ Liệu Tham Chiếu (Reference Data Types)&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;iii-kiểu-dữ-liệu-tham-chiếu-reference-data-types&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#iii-ki%e1%bb%83u-d%e1%bb%af-li%e1%bb%87u-tham-chi%e1%ba%bfu-reference-data-types&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Không giống như kiểu nguyên thủy, kiểu tham chiếu không lưu trữ trực tiếp giá trị mà lưu trữ địa chỉ (tham chiếu) đến đối tượng trong bộ nhớ.&lt;/p&gt;
+&lt;p&gt;Ví dụ: String, Array, Class, Interface.&lt;/p&gt;
+&lt;h4&gt;1. Kiểu Chuỗi (String)&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;1-kiểu-chuỗi-string&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#1-ki%e1%bb%83u-chu%e1%bb%97i-string&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;String là kiểu tham chiếu phổ biến nhất, dùng để lưu trữ chuỗi ký tự, được đặt trong dấu nháy kép (&amp;quot; &amp;ldquo;).&lt;/p&gt;
+&lt;div class=&#34;hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code&#34;&gt;
+
+&lt;div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;String tenBlog &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Blog Java&amp;#34;&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;String loiChao &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Chào mừng bạn!&amp;#34;&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;// String có thể được nối chuỗi (Concatenation)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;String thongBao &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; loiChao &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34; Đến với &amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; tenBlog;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0&#34;&gt;
+  &lt;button
+    class=&#34;hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50&#34;
+    title=&#34;Copy code&#34;
+  &gt;
+    &lt;div class=&#34;hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4&#34;&gt;&lt;/div&gt;
+  &lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;h4&gt;2. Mảng (Array)&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;2-mảng-array&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#2-m%e1%ba%a3ng-array&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;Mảng là một tập hợp các phần tử có cùng kiểu dữ liệu và có kích thước cố định.&lt;/p&gt;
+&lt;div class=&#34;hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code&#34;&gt;
+
+&lt;div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;// Khai báo một mảng các số nguyên (int)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;[]&lt;/span&gt; diemThi &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; {90, 85, 95};
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;// Khai báo một mảng các chuỗi (String)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;String&lt;span style=&#34;color:#f92672&#34;&gt;[]&lt;/span&gt; danhSachTen &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;new&lt;/span&gt; String&lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;5&lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt;;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0&#34;&gt;
+  &lt;button
+    class=&#34;hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50&#34;
+    title=&#34;Copy code&#34;
+  &gt;
+    &lt;div class=&#34;hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4&#34;&gt;&lt;/div&gt;
+  &lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;h4&gt;3. Kiểu Lớp/Đối tượng Tự Định Nghĩa (Class/Object)&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;3-kiểu-lớpđối-tượng-tự-định-nghĩa-classobject&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#3-ki%e1%bb%83u-l%e1%bb%9bp%c4%91%e1%bb%91i-t%c6%b0%e1%bb%a3ng-t%e1%bb%b1-%c4%91%e1%bb%8bnh-ngh%c4%a9a-classobject&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;Bất kỳ Class nào bạn tạo ra đều là một kiểu dữ liệu tham chiếu (ví dụ: XeHoi từ Bài 2).&lt;/p&gt;
+&lt;div class=&#34;hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code&#34;&gt;
+
+&lt;div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;// Giả sử có Class &amp;#39;SinhVien&amp;#39; đã được định nghĩa&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;// Tạo một đối tượng (tham chiếu) SinhVien mới&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;SinhVien svMoi &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;new&lt;/span&gt; SinhVien(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;An&amp;#34;&lt;/span&gt;, 20);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;// So sánh đối tượng (so sánh địa chỉ bộ nhớ)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;SinhVien svKhac &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; svMoi; &lt;span style=&#34;color:#f92672&#34;&gt;//&lt;/span&gt; Hai tham chiếu trỏ về cùng một đối tượng&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0&#34;&gt;
+  &lt;button
+    class=&#34;hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50&#34;
+    title=&#34;Copy code&#34;
+  &gt;
+    &lt;div class=&#34;hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4&#34;&gt;&lt;/div&gt;
+  &lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;h4&gt;4. Interface (Giao diện) và Wrapper Classes&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;4-interface-giao-diện-và-wrapper-classes&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#4-interface-giao-di%e1%bb%87n-v%c3%a0-wrapper-classes&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;&lt;strong&gt;Interface (Giao diện)&lt;/strong&gt;: Dùng để tham chiếu đến các đối tượng triển khai giao diện đó. Ví dụ: List, Map.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Wrapper Classes&lt;/strong&gt;: Các lớp bao bọc (Object) cho các kiểu nguyên thủy, dùng khi cần xử lý kiểu nguyên thủy như một đối tượng (ví dụ: trong các Collection).&lt;/p&gt;
+&lt;h3&gt;IV. Quy Tắc Gán Giá Trị (Assignment) và Ép Kiểu (Casting)&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;iv-quy-tắc-gán-giá-trị-assignment-và-ép-kiểu-casting&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#iv-quy-t%e1%ba%afc-g%c3%a1n-gi%c3%a1-tr%e1%bb%8b-assignment-v%c3%a0-%c3%a9p-ki%e1%bb%83u-casting&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;h4&gt;1. Gán Giá Trị (Assignment)&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;1-gán-giá-trị-assignment&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#1-g%c3%a1n-gi%c3%a1-tr%e1%bb%8b-assignment&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;Sử dụng toán tử = để gán giá trị cho biến.&lt;/p&gt;
+&lt;div class=&#34;hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code&#34;&gt;
+
+&lt;div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; x &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; 10;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;x &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; 20; &lt;span style=&#34;color:#f92672&#34;&gt;//&lt;/span&gt; Giá trị mới là 20&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0&#34;&gt;
+  &lt;button
+    class=&#34;hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50&#34;
+    title=&#34;Copy code&#34;
+  &gt;
+    &lt;div class=&#34;hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4&#34;&gt;&lt;/div&gt;
+  &lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;h4&gt;2. Ép Kiểu (Type Casting)&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;2-ép-kiểu-type-casting&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#2-%c3%a9p-ki%e1%bb%83u-type-casting&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Ép kiểu&lt;/strong&gt; là chuyển đổi giá trị từ kiểu dữ liệu này sang kiểu dữ liệu khác.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Ép kiểu Ngầm Định (Implicit Casting)&lt;/strong&gt;: Xảy ra tự động khi chuyển từ kiểu nhỏ hơn sang kiểu lớn hơn (không mất mát dữ liệu).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;Thứ tự: &lt;code&gt;byte&lt;/code&gt; → &lt;code&gt;short&lt;/code&gt; → &lt;code&gt;int&lt;/code&gt; → &lt;code&gt;long&lt;/code&gt; → &lt;code&gt;float&lt;/code&gt; → &lt;code&gt;double&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code&#34;&gt;
+
+&lt;div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; a &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; 100;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;double&lt;/span&gt; b &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; a; &lt;span style=&#34;color:#f92672&#34;&gt;//&lt;/span&gt; Implicit: b &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; 100.&lt;span style=&#34;color:#a6e22e&#34;&gt;0&lt;/span&gt; (tự động)&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0&#34;&gt;
+  &lt;button
+    class=&#34;hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50&#34;
+    title=&#34;Copy code&#34;
+  &gt;
+    &lt;div class=&#34;hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4&#34;&gt;&lt;/div&gt;
+  &lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Ép kiểu Tường Minh (Explicit Casting)&lt;/strong&gt;: Phải khai báo kiểu dữ liệu đích (có thể gây mất mát dữ liệu).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code&#34;&gt;
+
+&lt;div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;double&lt;/span&gt; c &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; 10.&lt;span style=&#34;color:#a6e22e&#34;&gt;99&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; d &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; (&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt;) c; &lt;span style=&#34;color:#f92672&#34;&gt;//&lt;/span&gt; Explicit: d &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; 10 (mất phần thập phân .&lt;span style=&#34;color:#a6e22e&#34;&gt;99&lt;/span&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0&#34;&gt;
+  &lt;button
+    class=&#34;hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50&#34;
+    title=&#34;Copy code&#34;
+  &gt;
+    &lt;div class=&#34;hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4&#34;&gt;&lt;/div&gt;
+  &lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;h3&gt;V. Tổng Kết: Lưu Trữ Hiệu Quả&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;v-tổng-kết-lưu-trữ-hiệu-quả&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#v-t%e1%bb%95ng-k%e1%ba%bft-l%c6%b0u-tr%e1%bb%af-hi%e1%bb%87u-qu%e1%ba%a3&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Việc chọn kiểu dữ liệu phù hợp giúp tối ưu hóa bộ nhớ và độ chính xác của chương trình.&lt;/p&gt;
+
+      </description>
     </item>
+    
   </channel>
 </rss>
