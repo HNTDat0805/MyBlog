@@ -1,13 +1,13 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Blog Java &amp; JavaScript – String</title>
-    <link>https://hntdat0805.github.io/MyBlog/tags/string/</link>
+    <link>http://localhost:1313/MyBlog/tags/string/</link>
     <description>Recent content in String on Blog Java &amp; JavaScript</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>vi</language>
     <lastBuildDate>Thu, 23 Oct 2025 00:00:00 +0000</lastBuildDate>
     
-	  <atom:link href="https://hntdat0805.github.io/MyBlog/tags/string/index.xml" rel="self" type="application/rss+xml" />
+	  <atom:link href="http://localhost:1313/MyBlog/tags/string/index.xml" rel="self" type="application/rss+xml" />
     
     
       
@@ -17,10 +17,10 @@
     
     <item>
       <title>MẢNG VÀ CHUỖI</title>
-      <link>https://hntdat0805.github.io/MyBlog/posts/bai5_mang-va-chuoi/</link>
+      <link>http://localhost:1313/MyBlog/posts/bai5_mang-va-chuoi/</link>
       <pubDate>Thu, 23 Oct 2025 00:00:00 +0000</pubDate>
       
-      <guid>https://hntdat0805.github.io/MyBlog/posts/bai5_mang-va-chuoi/</guid>
+      <guid>http://localhost:1313/MyBlog/posts/bai5_mang-va-chuoi/</guid>
       <description>
         
         

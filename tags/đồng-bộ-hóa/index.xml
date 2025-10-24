@@ -1,13 +1,13 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Blog Java &amp; JavaScript – Đồng Bộ Hóa</title>
-    <link>https://hntdat0805.github.io/MyBlog/tags/%C4%91%E1%BB%93ng-b%E1%BB%99-h%C3%B3a/</link>
+    <link>http://localhost:1313/MyBlog/tags/%C4%91%E1%BB%93ng-b%E1%BB%99-h%C3%B3a/</link>
     <description>Recent content in Đồng Bộ Hóa on Blog Java &amp; JavaScript</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>vi</language>
     <lastBuildDate>Thu, 23 Oct 2025 00:00:00 +0000</lastBuildDate>
     
-	  <atom:link href="https://hntdat0805.github.io/MyBlog/tags/%C4%91%E1%BB%93ng-b%E1%BB%99-h%C3%B3a/index.xml" rel="self" type="application/rss+xml" />
+	  <atom:link href="http://localhost:1313/MyBlog/tags/%C4%91%E1%BB%93ng-b%E1%BB%99-h%C3%B3a/index.xml" rel="self" type="application/rss+xml" />
     
     
       
@@ -17,10 +17,10 @@
     
     <item>
       <title>LẬP TRÌNH ĐA LUỒNG (MULTITHREADING)</title>
-      <link>https://hntdat0805.github.io/MyBlog/posts/bai9_da-luong/</link>
+      <link>http://localhost:1313/MyBlog/posts/bai9_da-luong/</link>
       <pubDate>Thu, 23 Oct 2025 00:00:00 +0000</pubDate>
       
-      <guid>https://hntdat0805.github.io/MyBlog/posts/bai9_da-luong/</guid>
+      <guid>http://localhost:1313/MyBlog/posts/bai9_da-luong/</guid>
       <description>
         
         
