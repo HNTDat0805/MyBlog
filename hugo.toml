@@ -1,7 +1,7 @@
 baseURL = "https://hntdat0805.github.io/MyBlog/"
 languageCode = "vi"
 title = "Blog Java & JavaScript"
-theme = 'hextra'
+theme = "hextra"
 buildDrafts = true
 
 [params]
@@ -13,7 +13,10 @@ buildDrafts = true
   show_toc = true
   show_share_buttons = true
   date_format = "02-01-2006"
-  enable = true
+
+  [params.theme]
+    colorScheme = "auto" # auto = tự chuyển sáng/tối
+    defaultMode = "light"
 
 [menu]
   [[menu.main]]

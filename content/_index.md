@@ -1,5 +1,7 @@
 ---
 title: "Trang chủ"
+cascade:
+  type: blog
 linkTitle: "Tất Cả Bài Viết"
 weight: 1
 ---
@@ -29,7 +31,7 @@ Bạn sẽ tìm thấy ở đây:
 
 🔹 **Trang [Blog](./blog/)** — nơi chứa tất cả bài viết về Java và JavaScript.  
 🔹 **Trang [Về Tôi](./about/)** — nơi bạn có thể hiểu hơn về hành trình của mình.  
-🔹 **Liên hệ** — bạn có thể để lại bình luận hoặc kết nối với mình qua email, GitHub hay LinkedIn (mình sẽ cập nhật sau).
+🔹 **Liên hệ** — bạn có thể để lại bình luận hoặc kết nối với mình qua email, GitHub (mình sẽ cập nhật thêm sau này).
 
 ---
 
