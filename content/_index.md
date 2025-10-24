@@ -1,5 +1,7 @@
 ---
 title: "Trang chủ"
+linkTitle: "Tất Cả Bài Viết"
+weight: 1
 ---
 
 # 👋 Chào mừng bạn đến với Blog của Hồ Nguyễn Tấn Đạt
