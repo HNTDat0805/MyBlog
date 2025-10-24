@@ -1,0 +1,7 @@
+# Thư mục chứa kết quả build của Hugo. 
+# Nó nên được các dịch vụ hosting (như Netlify, GitHub Pages) tự động build lại.
+/public/
+
+# Các file cache và tài nguyên tạm thời của Hugo
+/resources/_gen/
+/.hugo_build.lock
