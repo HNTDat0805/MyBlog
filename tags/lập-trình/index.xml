@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Lập Trình on Blog Java &amp; JavaScript</title>
-    <link>https://github.com/HNTDat0805/MyBlog/tags/l%E1%BA%ADp-tr%C3%ACnh/</link>
+    <link>https://hntdat0805.github.io/MyBlog/tags/l%E1%BA%ADp-tr%C3%ACnh/</link>
     <description>Recent content in Lập Trình on Blog Java &amp; JavaScript</description>
     <generator>Hugo</generator>
     <language>vi</language>
     <lastBuildDate>Thu, 23 Oct 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://github.com/HNTDat0805/MyBlog/tags/l%E1%BA%ADp-tr%C3%ACnh/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://hntdat0805.github.io/MyBlog/tags/l%E1%BA%ADp-tr%C3%ACnh/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>GIỚI THIỆU VỀ JAVA</title>
-      <link>https://github.com/HNTDat0805/MyBlog/posts/bai1_gioi-thieu-java/</link>
+      <link>https://hntdat0805.github.io/MyBlog/posts/bai1_gioi-thieu-java/</link>
       <pubDate>Thu, 23 Oct 2025 00:00:00 +0000</pubDate>
-      <guid>https://github.com/HNTDat0805/MyBlog/posts/bai1_gioi-thieu-java/</guid>
+      <guid>https://hntdat0805.github.io/MyBlog/posts/bai1_gioi-thieu-java/</guid>
       <description>&lt;h3 id=&#34;i-java-là-gì-định-nghĩa-cốt-lõi&#34;&gt;I. Java Là Gì? Định Nghĩa Cốt Lõi&lt;/h3&gt;&#xA;&lt;p&gt;&lt;strong&gt;Java&lt;/strong&gt; là ngôn ngữ lập trình &lt;strong&gt;hướng đối tượng (OOP)&lt;/strong&gt;, được phát triển bởi &lt;strong&gt;James Gosling&lt;/strong&gt; tại Sun Microsystems. Java nổi tiếng với sự ổn định, mạnh mẽ và khả năng &lt;strong&gt;độc lập nền tảng&lt;/strong&gt; tuyệt đối thông qua triết lý: &lt;strong&gt;WORA (Write Once, Run Anywhere)&lt;/strong&gt;.&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h3 id=&#34;ii-cơ-chế-wora-bộ-ba-thần-thánh&#34;&gt;II. Cơ Chế WORA: Bộ Ba Thần Thánh&lt;/h3&gt;&#xA;&lt;p&gt;Bí quyết để Java chạy được trên mọi nền tảng (Windows, macOS, Linux,&amp;hellip;) mà không cần biên dịch lại mã nguồn là cơ chế thực thi đặc biệt của nó:&lt;/p&gt;</description>
     </item>
   </channel>

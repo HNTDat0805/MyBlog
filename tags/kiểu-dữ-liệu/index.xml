@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Kiểu Dữ Liệu on Blog Java &amp; JavaScript</title>
-    <link>https://github.com/HNTDat0805/MyBlog/tags/ki%E1%BB%83u-d%E1%BB%AF-li%E1%BB%87u/</link>
+    <link>https://hntdat0805.github.io/MyBlog/tags/ki%E1%BB%83u-d%E1%BB%AF-li%E1%BB%87u/</link>
     <description>Recent content in Kiểu Dữ Liệu on Blog Java &amp; JavaScript</description>
     <generator>Hugo</generator>
     <language>vi</language>
     <lastBuildDate>Thu, 23 Oct 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://github.com/HNTDat0805/MyBlog/tags/ki%E1%BB%83u-d%E1%BB%AF-li%E1%BB%87u/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://hntdat0805.github.io/MyBlog/tags/ki%E1%BB%83u-d%E1%BB%AF-li%E1%BB%87u/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>BIẾN VÀ KIỂU DỮ LIỆU</title>
-      <link>https://github.com/HNTDat0805/MyBlog/posts/bai3_bien-kieu-du-lieu/</link>
+      <link>https://hntdat0805.github.io/MyBlog/posts/bai3_bien-kieu-du-lieu/</link>
       <pubDate>Thu, 23 Oct 2025 00:00:00 +0000</pubDate>
-      <guid>https://github.com/HNTDat0805/MyBlog/posts/bai3_bien-kieu-du-lieu/</guid>
+      <guid>https://hntdat0805.github.io/MyBlog/posts/bai3_bien-kieu-du-lieu/</guid>
       <description>&lt;h3 id=&#34;i-biến-variables-là-gì&#34;&gt;I. Biến (Variables) Là Gì?&lt;/h3&gt;&#xA;&lt;p&gt;&lt;strong&gt;Biến&lt;/strong&gt; là một vùng nhớ được đặt tên trong bộ nhớ máy tính, dùng để lưu trữ dữ liệu.&lt;/p&gt;&#xA;&lt;h4 id=&#34;cú-pháp-khai-báo-biến&#34;&gt;Cú Pháp Khai Báo Biến&lt;/h4&gt;&#xA;&lt;p&gt;Cú pháp cơ bản bao gồm &lt;strong&gt;Kiểu Dữ Liệu&lt;/strong&gt; và &lt;strong&gt;Tên Biến&lt;/strong&gt;:&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;// Cú pháp: [Kiểu Dữ Liệu] [Tên Biến];&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; soLuong;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;// Khai báo và gán giá trị ban đầu (Initialization)&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;String tenHocSinh &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Nguyễn Văn A&amp;#34;&lt;/span&gt;;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;ii-kiểu-dữ-liệu-nguyên-thủy-primitive-data-types&#34;&gt;II. Kiểu Dữ Liệu Nguyên Thủy (Primitive Data Types)&lt;/h3&gt;&#xA;&lt;p&gt;Java có 8 kiểu dữ liệu nguyên thủy cơ bản, chúng được dùng để lưu trữ các giá trị đơn lẻ và có kích thước cố định trong bộ nhớ.&lt;/p&gt;</description>
     </item>
   </channel>

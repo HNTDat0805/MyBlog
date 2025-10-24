@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Oop on Blog Java &amp; JavaScript</title>
-    <link>https://github.com/HNTDat0805/MyBlog/tags/oop/</link>
+    <link>https://hntdat0805.github.io/MyBlog/tags/oop/</link>
     <description>Recent content in Oop on Blog Java &amp; JavaScript</description>
     <generator>Hugo</generator>
     <language>vi</language>
     <lastBuildDate>Thu, 23 Oct 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://github.com/HNTDat0805/MyBlog/tags/oop/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://hntdat0805.github.io/MyBlog/tags/oop/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>LẬP TRÌNH HƯỚNG ĐỐI TƯỢNG - OOP</title>
-      <link>https://github.com/HNTDat0805/MyBlog/posts/bai6_lap-trinh-huong-doi-tuong/</link>
+      <link>https://hntdat0805.github.io/MyBlog/posts/bai6_lap-trinh-huong-doi-tuong/</link>
       <pubDate>Thu, 23 Oct 2025 00:00:00 +0000</pubDate>
-      <guid>https://github.com/HNTDat0805/MyBlog/posts/bai6_lap-trinh-huong-doi-tuong/</guid>
+      <guid>https://hntdat0805.github.io/MyBlog/posts/bai6_lap-trinh-huong-doi-tuong/</guid>
       <description>&lt;h3 id=&#34;i-oop-là-gì-tư-duy-lập-trình-mới&#34;&gt;I. OOP Là Gì? Tư Duy Lập Trình Mới&lt;/h3&gt;&#xA;&lt;p&gt;&lt;strong&gt;Lập trình Hướng Đối Tượng (Object-Oriented Programming - OOP)&lt;/strong&gt; là một mô hình lập trình dựa trên khái niệm &lt;strong&gt;Đối tượng (Object)&lt;/strong&gt;, trong đó dữ liệu (thuộc tính) và code (phương thức) được đóng gói lại với nhau.&lt;/p&gt;&#xA;&lt;p&gt;OOP là nền tảng quan trọng nhất của Java, giúp chúng ta mô hình hóa các thực thể trong thế giới thực vào code, làm cho chương trình trở nên dễ quản lý, linh hoạt và tái sử dụng hơn.&lt;/p&gt;</description>
     </item>
   </channel>
